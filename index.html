@@ -543,8 +543,19 @@
             text-decoration: none;
         }
 
-        .teaching-intro {
-            max-width: 860px;
+        .teaching-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .teaching-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 40px rgba(0,0,0,0.06);
         }
 
         .teaching-intro p {
@@ -989,6 +1000,13 @@
                 gap: 2.5rem;
             }
 
+            .teaching-top {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+
+
             .education-image img {
                 height: 380px;
             }
@@ -1241,9 +1259,14 @@
     <section id="teaching" class="about teaching">
         <div class="container">
             <h2>Teaching</h2>
-            <div class="teaching-intro">
-                <p>Dr. Jones teaches community health and public health at York College. He coordinates HE 111, Health and the Individual, a course every York student takes, across as many as twelve sections a semester and every modality. He also coordinates the Health Promotion Management program and directs the Health Promotion Center.</p>
-                <p>He redeveloped HE 481, Organization and Administration of Health Education, for York's online Community Health Education program, and his version is now the template for the instructors who follow. Dating app safety and digital health come up often in his classes, because his students live them.</p>
+            <div class="teaching-top">
+                <div class="teaching-intro">
+                    <p>Dr. Jones teaches community health and public health at York College. He coordinates HE 111, Health and the Individual, a course every York student takes, across as many as twelve sections a semester and every modality. He also coordinates the Health Promotion Management program and directs the Health Promotion Center.</p>
+                    <p>He redeveloped HE 481, Organization and Administration of Health Education, for York's online Community Health Education program, and his version is now the template for the instructors who follow. Dating app safety and digital health come up often in his classes, because his students live them.</p>
+                </div>
+                <div class="teaching-image">
+                    <img src="faculty-forum-photo.jpg" alt="Dr. Vincent Jones II presenting at the York College Faculty Forum" loading="lazy">
+                </div>
             </div>
             <h3 class="courses-head">Courses taught</h3>
             <p class="courses-note">Course titles and descriptions are in the <a href="https://york-undergraduate.catalog.cuny.edu/departments/HLTHED-YRK/courses" target="_blank" rel="noopener">York College catalog</a>.</p>
