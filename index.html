@@ -285,6 +285,43 @@
             line-height: 1.8;
         }
 
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .credential {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            border-left: 3px solid var(--rich-teal);
+            padding-left: 1rem;
+        }
+
+        .credential-abbr {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            letter-spacing: 0.01em;
+        }
+
+        .credential-field {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--rich-teal);
+            line-height: 1.35;
+        }
+
+        .credential-place {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.45;
+        }
+
         .expertise {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -718,6 +755,10 @@
             .expertise {
                 grid-template-columns: 1fr;
             }
+
+            .credentials {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -790,7 +831,7 @@
         <div class="container">
             <div class="hero-content">
                 <span class="hero-kicker"><span>Assistant Professor of Community Health</span><span>York College, The City University of New York</span></span>
-                <h1>Vincent Jones II, Ed.D.</h1>
+                <h1>Vincent Jones II, Ed.D., M.A., MCHES</h1>
                 <p class="subtitle">Public health research on what happens to people on dating apps, who gets hurt the most, and what actually protects them.</p>
                 <ul class="hero-topics">
                     <li>Dating app safety</li>
@@ -827,8 +868,26 @@
                     
                     <p>With colleagues at York and Lehman, he developed two validated instruments for this work: the Dating-App Interpersonal Harm Scale, which measures six kinds of harm and how much each one hurts, and the Dating-App Harm Response Self-Efficacy Scale, which measures confidence in responding. His current projects extend that work to platform safety policy, to the people least able to ask for help, and to harm from AI agents. Alongside the research, he writes for general audiences about dating culture, digital safety, and queer life. In May 2026 he was an invited panelist at the United Nations, at a side event of the 59th Session of the Commission on Population and Development, on how online dating is reshaping family formation.</p>
                     
-                    <p>Dr. Jones holds a Doctorate in Education and brings both scholarly depth and cultural insight to conversations about how technology shapes modern relationships, identity, and community.</p>
+                    <p>His training spans three areas that the work draws on together: a doctorate in health education, a master’s in education policy, and credentialing as a Master Certified Health Education Specialist. That combination is why the research moves between measurement, platform policy, and what can actually be taught in a classroom.</p>
                     <p><a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener" style="color: var(--rich-teal); font-weight: 600;">Download curriculum vitae (PDF) &rarr;</a></p>
+
+                    <div class="credentials">
+                        <div class="credential">
+                            <span class="credential-abbr">Ed.D.</span>
+                            <span class="credential-field">Health Education</span>
+                            <span class="credential-place">Teachers College, Columbia University, 2020</span>
+                        </div>
+                        <div class="credential">
+                            <span class="credential-abbr">M.A.</span>
+                            <span class="credential-field">Education Policy</span>
+                            <span class="credential-place">Teachers College, Columbia University, 2014</span>
+                        </div>
+                        <div class="credential">
+                            <span class="credential-abbr">MCHES</span>
+                            <span class="credential-field">Master Certified Health Education Specialist</span>
+                            <span class="credential-place">National Commission for Health Education Credentialing</span>
+                        </div>
+                    </div>
 
                     <div class="expertise">
                         <div class="expertise-item">
