@@ -511,6 +511,80 @@
             text-decoration: none;
         }
 
+        .teaching-intro {
+            max-width: 860px;
+        }
+
+        .teaching-intro p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .teaching-intro p + p {
+            margin-top: 1.25rem;
+        }
+
+        .courses-head {
+            color: var(--primary-navy);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 3rem 0 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold-accent);
+            max-width: 860px;
+        }
+
+        .courses-note {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: -0.5rem 0 1.25rem;
+        }
+
+        .courses-note a {
+            color: var(--rich-teal);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .course-grid {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .course-grid li {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-left: 3px solid var(--rich-teal);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .course-num {
+            font-weight: 700;
+            color: var(--primary-navy);
+            font-size: 0.95rem;
+        }
+
+        .course-title {
+            color: var(--primary-navy);
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.45;
+        }
+
+        .course-desc {
+            color: var(--text-light);
+            font-size: 0.88rem;
+            line-height: 1.55;
+            margin-top: 0.2rem;
+        }
+
         /* Media Section */
         .media {
             background: var(--bg-white);
@@ -894,6 +968,10 @@
             .pubs {
                 grid-template-columns: 1fr;
             }
+
+            .course-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -954,6 +1032,10 @@
             .stat-num {
                 font-size: 1.6rem;
             }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -965,6 +1047,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#speaking">Speaking</a></li>
                 <li><a href="#media">Media</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1084,6 +1167,32 @@
                     <p class="pub-more"><a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener">Full list in the CV &rarr;</a> &nbsp;&middot;&nbsp; <a href="https://orcid.org/0000-0002-1220-6976" target="_blank" rel="noopener">ORCID &rarr;</a></p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="about teaching">
+        <div class="container">
+            <h2>Teaching</h2>
+            <div class="teaching-intro">
+                <p>Dr. Jones teaches community health and public health at York College. He coordinates HE 111, Health and the Individual, a course every York student takes, across as many as twelve sections a semester and every modality. He also coordinates the Health Promotion Management program and directs the Health Promotion Center.</p>
+                <p>He redeveloped HE 481, Organization and Administration of Health Education, for York's online Community Health Education program, and his version is now the template for the instructors who follow. Dating app safety and digital health come up often in his classes, because his students live them.</p>
+            </div>
+            <h3 class="courses-head">Courses taught</h3>
+            <p class="courses-note">Course titles follow the <a href="https://york-undergraduate.catalog.cuny.edu/departments/HLTHED-YRK/courses" target="_blank" rel="noopener">York College catalog</a>.</p>
+            <ul class="course-grid">
+                    <li><span class="course-num">GERO 101</span><span class="course-title">Introduction to Gerontology I</span><span class="course-desc">Aging, seen through anthropology, biology, health, political science, and sociology.</span></li>
+                    <li><span class="course-num">HE 111</span><span class="course-title">Health and the Individual</span><span class="course-desc">Assessing personal health behavior and building strategies to lower health risk.</span></li>
+                    <li><span class="course-num">HE 201</span><span class="course-title">Foundations of Health and Wellness</span><span class="course-desc">The history, philosophy, and theory behind health education and health promotion.</span></li>
+                    <li><span class="course-num">HE 223 and 224</span><span class="course-title">Health Behavior, with Laboratory</span><span class="course-desc">What shapes health decisions, and hands-on practice designing behavior change.</span></li>
+                    <li><span class="course-num">HE 312</span><span class="course-title">Health, Communities, and Society</span><span class="course-desc">Risk behavior and disease in communities, and the agencies and methods that prevent them.</span></li>
+                    <li><span class="course-num">HE 341</span><span class="course-title">HIV/AIDS: Public Health Implications</span><span class="course-desc">The epidemic&rsquo;s politics, law, clinical care, prevention, and public health response.</span></li>
+                    <li><span class="course-num">HE 474</span><span class="course-title">Field Work in Health Education</span><span class="course-desc">Supervised field experience in a community health setting.</span></li>
+                    <li><span class="course-num">HE 481</span><span class="course-title">Organization and Administration of Health Education</span><span class="course-desc">Organizing, running, and evaluating health education programs in schools and communities.</span></li>
+                    <li><span class="course-num">PH 215</span><span class="course-title">Social and Behavioral Determinants of Health</span><span class="course-desc">The biological, social, economic, and political forces behind health behavior and disparities.</span></li>
+                    <li><span class="course-num">PH 330</span><span class="course-title">Public Health Policy and Management</span><span class="course-desc">How public, private, and voluntary health agencies are run, and the roles professionals play in them.</span></li>
+                    <li><span class="course-num">PH 335</span><span class="course-title">Planning and Funding for Public Health</span><span class="course-desc">Planning community based public health programs and policies, and securing the funding to run them.</span></li>
+            </ul>
         </div>
     </section>
 
