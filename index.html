@@ -79,11 +79,39 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--light-teal) 0%, var(--bg-white) 100%);
-            padding: 8rem 3rem 6rem;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #1a4d7a 100%);
+            padding: 7rem 3rem 4.5rem;
+            color: var(--bg-white);
+        }
+
+        .hero-kicker {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold-accent);
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 0 0 2.5rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .hero-topics li {
+            font-size: 0.9rem;
+            padding: 0.45rem 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.06);
         }
 
         .hero .container {
@@ -96,41 +124,55 @@
         }
 
         .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
+            font-size: 3.6rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.08;
             font-weight: 600;
             letter-spacing: -0.03em;
-            color: var(--primary-navy);
+            color: var(--bg-white);
         }
 
         .hero-content .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1.35rem;
+            margin-bottom: 1.5rem;
             font-weight: 400;
-            color: var(--text-light);
+            color: rgba(255, 255, 255, 0.8);
             line-height: 1.4;
         }
 
         .hero-content p {
             font-size: 1.1rem;
-            margin-bottom: 3rem;
-            color: var(--text-light);
+            margin-bottom: 1.75rem;
+            color: rgba(255, 255, 255, 0.88);
             line-height: 1.8;
             max-width: 600px;
         }
 
         .hero-image {
             position: relative;
-            height: 600px;
+            height: 520px;
         }
 
         .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center top;
             border-radius: 12px;
-            box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 50px rgba(0,0,0,0.35);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero .btn-secondary {
+            background: transparent;
+            color: var(--bg-white);
+            border-color: rgba(255, 255, 255, 0.45);
+        }
+
+        .hero .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--bg-white);
+            color: var(--bg-white);
         }
 
         .cta-buttons {
@@ -668,11 +710,16 @@
             }
 
             .hero {
-                padding: 6rem 1.5rem 4rem;
+                padding: 11rem 1.5rem 3.5rem;
             }
 
             .hero-content h1 {
                 font-size: 2.5rem;
+            }
+
+            .hero-topics li {
+                font-size: 0.85rem;
+                padding: 0.35rem 0.75rem;
             }
 
             .hero-content .subtitle {
@@ -714,9 +761,16 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <span class="hero-kicker">Community Health · York College, CUNY</span>
                 <h1>Vincent Jones II, Ed.D.</h1>
-                <p class="subtitle">Dating App Culture & LGBTQ+ Health Expert</p>
-                <p>Bridging academic research and public discourse on digital intimacy, technology-facilitated violence, and creating safer spaces in the digital age.</p>
+                <p class="subtitle">Public health research on what happens to people on dating apps, who gets hurt the most, and what actually protects them.</p>
+                <ul class="hero-topics">
+                    <li>Dating app safety</li>
+                    <li>Technology-facilitated gender-based violence</li>
+                    <li>Measurement and scale development</li>
+                    <li>Digital health equity</li>
+                    <li>Sexual and gender minority health</li>
+                </ul>
                 <div class="cta-buttons">
                     <a href="#speaking" class="btn btn-primary">Book for Speaking</a>
                     <a href="#research" class="btn btn-secondary">View Research</a>
@@ -741,9 +795,9 @@
                 </div>
                 <div class="about-text">
                     <h3>Scholar. Educator. Public Health Advocate.</h3>
-                    <p>Dr. Vincent Jones II is an Assistant Professor of Community Health and Director of the Health Promotion Center at York College, The City University of New York. His groundbreaking research examines the intersection of technology and intimacy, with a focus on how dating apps and social media impact the health and safety of women and LGBTQ+ communities.</p>
+                    <p>Dr. Vincent Jones II is an Assistant Professor of Community Health and Director of the Health Promotion Center at York College, The City University of New York. His research sits at the intersection of e-health, digital environments, and public health equity. He studies what happens to people on dating apps: how often harm occurs, how much it hurts, who is affected most, and what helps people respond.</p>
                     
-                    <p>Through grant-funded studies and community-engaged scholarship, Dr. Jones investigates technology-facilitated gender-based violence (TF-GBV), user perceptions of app policies, and strategies for responding to cyber victimization. His work combines rigorous academic research with accessible public writing, making him a sought-after voice on contemporary dating culture, digital safety, and LGBTQ+ issues.</p>
+                    <p>With colleagues at York and Lehman, he developed two validated instruments for this work: the Dating-App Interpersonal Harm Scale, which measures six kinds of harm and how much each one hurts, and the Dating-App Harm Response Self-Efficacy Scale, which measures confidence in responding. His current projects extend that work to platform safety policy, to the people least able to ask for help, and to harm from AI agents. Alongside the research, he writes for general audiences about dating culture, digital safety, and queer life.</p>
                     
                     <p>Dr. Jones holds a Doctorate in Education and brings both scholarly depth and cultural insight to conversations about how technology shapes modern relationships, identity, and community.</p>
                     <p><a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener" style="color: var(--rich-teal); font-weight: 600;">Download curriculum vitae (PDF) &rarr;</a></p>
