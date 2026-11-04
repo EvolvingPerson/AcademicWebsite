@@ -390,6 +390,97 @@
             font-size: 1.05rem;
         }
 
+        .publication p + p {
+            margin-top: 1.25rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin: 0 0 2rem;
+        }
+
+        .stat {
+            background: var(--light-teal);
+            border-radius: 10px;
+            padding: 1.25rem 1.25rem 1.1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.45;
+        }
+
+        .pubs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 1rem;
+        }
+
+        .pub-group h3 {
+            color: var(--primary-navy);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-list li {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding: 0.9rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .pub-list li strong {
+            color: var(--primary-navy);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-list a, .pub-more a {
+            color: var(--rich-teal);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .pub-more {
+            margin-top: 1rem;
+        }
+
+        .contact-line {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .contact-line p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.75rem;
+        }
+
         /* Media Section */
         .media {
             background: var(--bg-white);
@@ -397,7 +488,7 @@
 
         .media-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
@@ -490,7 +581,7 @@
         }
 
         .topic-list li {
-            padding: 1.5rem 0;
+            padding: 1.1rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             font-size: 1.05rem;
             color: rgba(255, 255, 255, 0.95);
@@ -514,7 +605,7 @@
 
         .speaking-image img {
             width: 100%;
-            height: 600px;
+            height: 440px;
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 4px 40px rgba(0,0,0,0.06);
@@ -584,7 +675,7 @@
         .booking-cta p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            color: var(--text-light);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         /* Contact Section */
@@ -759,6 +850,14 @@
             .credentials {
                 grid-template-columns: 1fr;
             }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pubs {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -804,8 +903,20 @@
                 margin-bottom: 2.5rem;
             }
 
-            .newsletter-form {
-                flex-direction: column;
+            .publication {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .stats {
+                gap: 0.75rem;
+            }
+
+            .stat {
+                padding: 1rem 0.9rem;
+            }
+
+            .stat-num {
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -818,8 +929,8 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
-                <li><a href="#media">Media</a></li>
                 <li><a href="#speaking">Speaking</a></li>
+                <li><a href="#media">Media</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener">CV</a></li>
             </ul>
@@ -889,24 +1000,6 @@
                         </div>
                     </div>
 
-                    <div class="expertise">
-                        <div class="expertise-item">
-                            <h4>E-Health & Dating Apps</h4>
-                            <p>User behavior, policy perceptions, and health-information seeking on digital platforms</p>
-                        </div>
-                        <div class="expertise-item">
-                            <h4>Technology-Facilitated Violence</h4>
-                            <p>Cyber victimization, harassment, and safety strategies for vulnerable populations</p>
-                        </div>
-                        <div class="expertise-item">
-                            <h4>LGBTQ+ Health & Culture</h4>
-                            <p>Digital spaces, community safety, and cultural discourse around queer identity</p>
-                        </div>
-                        <div class="expertise-item">
-                            <h4>Public Health Education</h4>
-                            <p>Community-based interventions and health promotion strategies</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -915,59 +1008,41 @@
     <!-- Research Section -->
     <section id="research">
         <div class="container">
-            <h2>Research & Publications</h2>
-            
+            <h2>Research &amp; Publications</h2>
+
             <div class="publication">
                 <h3>What Dating Apps Don't Measure: Harm, Protection, and Equity</h3>
                 <p class="meta">Supported by the Professional Staff Congress of The City University of New York and the Mellon Foundation | 2025 to present</p>
-                <p>Dr. Jones leads a research program on what happens to people on dating apps, who gets hurt most, and what actually protects them. With colleagues at York College and Lehman College, he developed and validated two instruments: the Dating-App Interpersonal Harm Scale (DIHS-6D), which measures six kinds of harm and asks, for each one, both how often it happens and how much it hurts; and the Dating-App Harm Response Self-Efficacy Scale (DAHRSES), which measures a person's confidence that they can respond.</p>
-                <p>In a national survey of 867 adults who had used a dating app in the previous 60 days, 89 percent reported at least one harm. The most common harms were the least distressing, and the rarest were the most distressing. The harms that hurt most, pressure after saying no and being tracked or found offline, were the ones that in-app tools such as blocking and reporting reached least. Harm concentrated among women, people of color, sexual and gender minorities, and people who conceal their app use. Confidence in responding predicted protective action over and above how much harm a person had experienced.</p>
-                <p>A companion review of 24 North American dating platforms in 2025 and 2026 found that none document what happens after a user files a report, and that 71 percent place at least one safety feature behind a paywall. Four papers from this program are under review or submitted. The DIHS-6D validation paper is available as a <a href="https://doi.org/10.2139/ssrn.6753965" target="_blank">preprint on SSRN</a>.</p>
-            </div>
-
-            <div class="publication">
-                <h3>Digital Health & Social Media in Sexual and Gender Minority Communities</h3>
-                <p class="meta">Community Health Research</p>
-                <p>Investigating how sexual and gender minorities navigate digital platforms for health information, community building, and relationship formation, with emphasis on addressing unique vulnerabilities and enhancing protective factors in online spaces.</p>
-            </div>
-
-            <div class="publication">
-                <h3>Health Promotion & Community-Based Interventions</h3>
-                <p class="meta">York College Health Promotion Center</p>
-                <p>Directing initiatives that translate research into practice, developing evidence-based programs that address health disparities and promote wellness in underserved communities through culturally responsive approaches.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Media Section -->
-    <section id="media" class="media">
-        <div class="container">
-            <h2>Public Writing & Media</h2>
-            <div class="media-grid">
-                <div class="media-card">
-                    <div class="media-card-content">
-                        <span class="source">Vinegar Hill Magazine</span>
-                        <h3>Swipe Safety: The Dating App Education We Learn From Each Other</h3>
-                        <p>An exploration of how dating app users develop safety strategies through shared experiences and peer education, highlighting the gap between platform policies and user needs.</p>
-                        <a href="https://vinegarhillmagazine.com/swipe-safety-the-dating-app-education-we-learn-from-each-other/" target="_blank">Read Article →</a>
-                    </div>
+                <div class="stats">
+                    <div class="stat"><span class="stat-num">867</span><span class="stat-label">U.S. adults surveyed who used a dating app in the last 60 days</span></div>
+                    <div class="stat"><span class="stat-num">89%</span><span class="stat-label">reported at least one harm</span></div>
+                    <div class="stat"><span class="stat-num">0 of 24</span><span class="stat-label">platforms explain what happens after a report</span></div>
+                    <div class="stat"><span class="stat-num">71%</span><span class="stat-label">of platforms charge for at least one safety feature</span></div>
                 </div>
+                <p>Dr. Jones leads a research program on what happens to people on dating apps, who gets hurt most, and what actually protects them. With colleagues at York College and Lehman College, he developed two instruments: the Dating-App Interpersonal Harm Scale (DIHS-6D), which asks about six kinds of harm, both how often each happens and how much it hurts, and the Dating-App Harm Response Self-Efficacy Scale (DAHRSES), which measures confidence in responding.</p>
+                <p>The most common harms turned out to be the least distressing, and the rarest the most. The harms that hurt most, pressure after saying no and being tracked or found offline, are the ones blocking and reporting reach least. Harm concentrated among women, people of color, sexual and gender minorities, and people who conceal their app use. Confidence in responding predicted protective action over and above how much harm a person had experienced, which means part of the answer can be taught.</p>
+            </div>
 
-                <div class="media-card">
-                    <div class="media-card-content">
-                        <span class="source">Boston Globe</span>
-                        <h3>Bachelorette Parties in P-town Often Destroy Safe Spaces for LGBTQ+ People</h3>
-                        <p>A critical examination of how commercialization and tourism can erode historically queer spaces, and what it means for LGBTQ+ community safety and belonging.</p>
-                        <a href="https://www.bostonglobe.com/2022/08/08/opinion/bachelorette-parties-p-town-often-destroy-safe-spaces-lgbtq-people/" target="_blank">Read Article →</a>
-                    </div>
+            <div class="pubs">
+                <div class="pub-group">
+                    <h3>Under review</h3>
+                    <ul class="pub-list">
+                        <li><strong>Development and initial validation of the Dating-App Interpersonal Harm Scale (DIHS-6D).</strong> Jones II, V., Toussaint Jacques, E., &amp; Mewani, A. <em>Computers in Human Behavior</em>, sent out for peer review. <a href="https://doi.org/10.2139/ssrn.6753965" target="_blank" rel="noopener">Preprint</a></li>
+                        <li><strong>Who gets hurt and how much does it matter? Risk factors, protective action, and the frequency to distress dissociation in dating app interpersonal harm.</strong> Jones II, V., Toussaint Jacques, E., &amp; Mewani, A. <em>Journal of Interpersonal Violence</em>, under review.</li>
+                        <li><strong>Development and initial validation of the Dating-App Harm Response Self-Efficacy Scale (DAHRSES).</strong> Jones II, V., Toussaint Jacques, E., &amp; Mewani, A. <em>Journal of Interpersonal Violence</em>, under review.</li>
+                        <li><strong>Safer than before? A content analysis of safety features and policy frameworks across 24 North American dating platforms, 2025 to 2026.</strong> Jones II, V., Vanderpool, C., Datuowei, E., Mewani, A., &amp; Toussaint Jacques, E. <em>Health Promotion Practice</em>, under review.</li>
+                    </ul>
                 </div>
-
-                <div class="media-card">
-                    <div class="media-card-content">
-                        <span class="source">Featured Commentary</span>
-                        <h3>Expert Analysis & Media Appearances</h3>
-                        <p>Regular contributor to public discourse on dating culture, digital safety, and LGBTQ+ issues through interviews, podcasts, and opinion pieces in national outlets.</p>
-                    </div>
+                <div class="pub-group">
+                    <h3>Selected publications</h3>
+                    <ul class="pub-list">
+                        <li><strong>Engagement patterns with #NaturalRemedies on TikTok: Formative analysis.</strong> Mewani, A., Basch, C., Renne-Glover, K., Jones II, V., Cordero, C., &amp; Gutiqi, A. (2026). <em>JMIR Formative Research, 10</em>, e83274. <a href="https://doi.org/10.2196/83274" target="_blank" rel="noopener">DOI</a></li>
+                        <li><strong>Analysis of Google News coverage during the 2025 U.S. measles outbreak.</strong> Basch, C. H., Datuowei, E., Mewani, A., Jones II, V., &amp; Hillyer, G. C. (2025). <em>American Journal of Infection Control</em>. <a href="https://doi.org/10.1016/j.ajic.2025.08.018" target="_blank" rel="noopener">DOI</a></li>
+                        <li><strong>Psychometric properties, stability, and predictive validity of the Hindi version of the Prolonged Grief Disorder Scale (PG-13-R-H).</strong> Mewani, A. H., Jones II, V., Kim, S., Glickman, K. L., &amp; Prigerson, H. G. (2025). <em>Indian Journal of Psychological Medicine</em>. <a href="https://doi.org/10.1177/02537176251396436" target="_blank" rel="noopener">DOI</a></li>
+                        <li><strong>Black people in Ukraine: A content analysis of TikTok videos documenting discrimination against Black people attempting to flee at the onset of the 2022 Russo-Ukrainian war.</strong> Jones II, V., Kim, S., Tang, H., &amp; Liu, Z. (2023). <em>Dialogues in Health, 4</em>, 100161. <a href="https://doi.org/10.1016/j.dialog.2023.100161" target="_blank" rel="noopener">DOI</a></li>
+                        <li><strong>Health immigration status as a predictor of health-information seeking behavior among undergraduates at an urban commuter school.</strong> Jones II, V., Harish Mewani, A., Ardouin-Guerrier, M. A., Ally, B., Huggins, S., &amp; Basch, C. H. (2022). <em>Health Promotion Perspectives, 12</em>(3), 295&ndash;300. <a href="https://doi.org/10.34172/hpp.2022.38" target="_blank" rel="noopener">DOI</a></li>
+                    </ul>
+                    <p class="pub-more"><a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener">Full list in the CV &rarr;</a></p>
                 </div>
             </div>
         </div>
@@ -981,15 +1056,11 @@
                 <div class="speaking-topics">
                     <h3>Speaking Topics</h3>
                     <ul class="topic-list">
-                        <li>What Dating Apps Don't Measure: Harm, Protection & Equity</li>
-                        <li>Technology-Facilitated Gender-Based Violence: Research & Solutions</li>
-                        <li>Dating Apps & Digital Intimacy: Navigating Modern Relationships</li>
-                        <li>LGBTQ+ Digital Spaces: Safety, Community & Belonging</li>
-                        <li>Health Information in the Digital Age: Opportunities & Challenges</li>
-                        <li>Creating Inclusive Digital Environments</li>
-                        <li>Digital Safety Strategies for Vulnerable Populations</li>
-                        <li>Intersectionality in Online Dating & Social Media</li>
-                        <li>The Future of Digital Intimacy & Connection</li>
+                        <li>What Dating Apps Don't Measure: Harm, Protection, and Equity</li>
+                        <li>Technology-Facilitated Gender-Based Violence</li>
+                        <li>Online Dating, Family Formation, and Public Policy</li>
+                        <li>Sexual and Gender Minority Health in Digital Spaces</li>
+                        <li>Teaching Dating App Safety in Health Education</li>
                     </ul>
                 </div>
                 <div class="speaking-image">
@@ -1020,46 +1091,46 @@
         </div>
     </section>
 
+    <!-- Media Section -->
+    <section id="media" class="media">
+        <div class="container">
+            <h2>Public Writing & Media</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-card-content">
+                        <span class="source">Vinegar Hill Magazine</span>
+                        <h3>Swipe Safety: The Dating App Education We Learn From Each Other</h3>
+                        <p>An exploration of how dating app users develop safety strategies through shared experiences and peer education, highlighting the gap between platform policies and user needs.</p>
+                        <a href="https://vinegarhillmagazine.com/swipe-safety-the-dating-app-education-we-learn-from-each-other/" target="_blank">Read Article →</a>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <div class="media-card-content">
+                        <span class="source">Boston Globe</span>
+                        <h3>Bachelorette Parties in P-town Often Destroy Safe Spaces for LGBTQ+ People</h3>
+                        <p>A critical examination of how commercialization and tourism can erode historically queer spaces, and what it means for LGBTQ+ community safety and belonging.</p>
+                        <a href="https://www.bostonglobe.com/2022/08/08/opinion/bachelorette-parties-p-town-often-destroy-safe-spaces-lgbtq-people/" target="_blank">Read Article →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get in Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Speaking Engagements</h3>
-                    <p>Book Dr. Jones for keynotes, panels, workshops, and conference presentations</p>
-                    <a href="mailto:vjones1@york.cuny.edu?subject=Speaking%20Engagement%20Inquiry" class="btn">Book Speaking</a>
-                </div>
-
-                <div class="contact-card">
-                    <h3>Media Inquiries</h3>
-                    <p>Available for interviews, commentary, and expert analysis on dating culture and LGBTQ+ issues</p>
-                    <a href="mailto:vjones1@york.cuny.edu?subject=Media%20Inquiry" class="btn">Media Contact</a>
-                </div>
-
-                <div class="contact-card">
-                    <h3>Academic Collaboration</h3>
-                    <p>Interested in research partnerships, consulting, or workshop facilitation</p>
-                    <a href="mailto:vjones1@york.cuny.edu?subject=Collaboration%20Inquiry" class="btn">Collaborate</a>
-                </div>
-            </div>
-
-            <p style="text-align:center; margin: 2rem 0 0; color: var(--text-light);">Or write directly: <a href="mailto:vjones1@york.cuny.edu" style="color: var(--rich-teal); font-weight: 600;">vjones1@york.cuny.edu</a></p>
-
-            <div class="newsletter">
-                <h3>Stay Connected</h3>
-                <p>Subscribe to receive updates on new research, publications, and speaking events</p>
-                <form class="newsletter-form" action="#" method="post">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit">Subscribe</button>
-                </form>
+            <div class="contact-line">
+                <p>For speaking invitations, media inquiries, and research collaboration, write to Dr. Jones directly.</p>
+                <a href="mailto:vjones1@york.cuny.edu" class="btn btn-primary">vjones1@york.cuny.edu</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Dr. Vincent Jones II. All rights reserved.</p>
+        <p>&copy; 2026 Dr. Vincent Jones II. All rights reserved.</p>
         <p>Assistant Professor of Community Health | York College, The City University of New York</p>
     </footer>
 
