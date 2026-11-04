@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating App Research Portfolio | Dr. Vincent Jones II</title>
+    <meta name="description" content="Five manuscripts examining digital harm, queer space, platform safety, and measurement science in dating applications, from Dr. Vincent Jones II at York College, The City University of New York.">
+    <meta name="author" content="Vincent Jones II">
+    <link rel="canonical" href="https://www.drvincentjones.com/research-portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dr. Vincent Jones II">
+    <meta property="og:title" content="Dating App Research Portfolio | Dr. Vincent Jones II">
+    <meta property="og:description" content="Five manuscripts and two validated instruments on what happens to people on dating apps, how much it hurts, and what protects them.">
+    <meta property="og:url" content="https://www.drvincentjones.com/research-portfolio.html">
+    <meta property="og:image" content="https://www.drvincentjones.com/og-image-v3.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dating App Research Portfolio | Dr. Vincent Jones II">
+    <meta name="twitter:description" content="Five manuscripts and two validated instruments on what happens to people on dating apps, how much it hurts, and what protects them.">
+    <meta name="twitter:image" content="https://www.drvincentjones.com/og-image-v3.jpg">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-navy: #0F2C59;
+            --rich-teal: #0891B2;
+            --gold-accent: #D4AF37;
+            --light-teal: #E0F2F7;
+            --text-dark: #1a1a1a;
+            --text-light: #5B6B80;
+            --text-body: #334155;
+            --gold-text: #8A6A12;
+            --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            --bg-white: #ffffff;
+            --bg-off-white: #F8FAFC;
+            --border-light: #E2E8F0;
+            --warn-bg: #FEF6E4;
+            --success-bg: #ECF8F1;
+            --success-line: #2F855A;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        /* Navigation (matches the home page) */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        nav ul { list-style: none; display: flex; gap: 3rem; }
+        nav ul a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        nav ul a:hover { color: var(--rich-teal); }
+        nav ul a.active { color: var(--primary-navy); font-weight: 600; }
+
+        .container { max-width: 1400px; margin: 0 auto; }
+        section { padding: 4.75rem 3rem; scroll-margin-top: 80px; }
+        .alt { background: var(--bg-off-white); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            font-family: var(--serif);
+            color: var(--primary-navy);
+            line-height: 1.15;
+        }
+        h4 { color: var(--primary-navy); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.6rem; }
+        p { color: var(--text-body); line-height: 1.8; }
+        a { color: var(--rich-teal); }
+
+        /* Cover */
+        .cover {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #1a4d7a 100%);
+            color: var(--bg-white);
+            padding: 9rem 3rem 5rem;
+            text-align: center;
+        }
+        .kicker {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--gold-accent);
+            margin-bottom: 1.25rem;
+        }
+        .cover h1 {
+            font-family: var(--serif);
+            font-size: 3.6rem;
+            font-weight: 600;
+            line-height: 1.08;
+            letter-spacing: -0.015em;
+            margin-bottom: 1.25rem;
+        }
+        .cover .lede {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.2rem;
+            max-width: 780px;
+            margin: 0 auto 3.5rem;
+        }
+        .paper-cards {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.25rem;
+            text-align: left;
+        }
+        .paper-card {
+            grid-column: span 2;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.75rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.2s, border-color 0.2s, transform 0.2s;
+        }
+        .paper-card:nth-child(4) { grid-column: 2 / span 2; }
+        .paper-card:hover { background: rgba(255, 255, 255, 0.11); border-color: var(--gold-accent); transform: translateY(-2px); }
+        .num {
+            display: inline-block;
+            align-self: flex-start;
+            background: var(--gold-accent);
+            color: var(--primary-navy);
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+        .paper-card h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.5rem; }
+        .paper-card .authors { font-size: 0.85rem; font-style: italic; color: rgba(255, 255, 255, 0.65); padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
+        .paper-card p { color: rgba(255, 255, 255, 0.88); font-size: 0.95rem; line-height: 1.65; }
+        .summary-strip {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            list-style: none;
+            margin-top: 3rem;
+        }
+        .summary-strip li {
+            font-size: 0.9rem;
+            padding: 0.45rem 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        /* Paper sections */
+        .label {
+            display: inline-block;
+            border: 1px solid var(--rich-teal);
+            color: var(--rich-teal);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+        }
+        .paper-meta { margin-bottom: 2.25rem; max-width: 960px; }
+        .paper-meta p { font-size: 1rem; margin-bottom: 0.35rem; }
+        .paper-meta b { color: var(--primary-navy); }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        .two-col.wide-left { grid-template-columns: 1.6fr 1fr; }
+        .col > * + * { margin-top: 1.5rem; }
+
+        .callout { border-radius: 10px; padding: 1.25rem 1.5rem; border-left: 4px solid var(--rich-teal); background: var(--light-teal); }
+        .callout.warn { background: var(--warn-bg); border-left-color: var(--gold-accent); }
+        .callout.good { background: var(--success-bg); border-left-color: var(--success-line); }
+        .callout p { font-size: 0.98rem; line-height: 1.7; }
+        .callout b { color: var(--primary-navy); }
+
+        .mechanisms { display: grid; gap: 1rem; }
+        .mechanism { background: var(--bg-white); border: 1px solid var(--border-light); border-left: 4px solid var(--gold-accent); border-radius: 10px; padding: 1.25rem 1.5rem; }
+        .mechanism h4 { margin-bottom: 0.35rem; }
+        .mechanism p { font-size: 0.95rem; line-height: 1.65; }
+
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2.25rem; }
+        .stat { background: var(--light-teal); border-radius: 10px; padding: 1.5rem; }
+        .stat-num { display: block; font-size: 2.6rem; font-weight: 700; color: var(--primary-navy); line-height: 1.05; margin-bottom: 0.35rem; }
+        .stat h4 { margin-bottom: 0.25rem; }
+        .stat p { font-size: 0.92rem; line-height: 1.55; color: var(--text-light); }
+
+        .findings { list-style: none; }
+        .findings li { padding: 0.7rem 0 0.7rem 1.75rem; border-bottom: 1px solid var(--border-light); position: relative; color: var(--text-body); }
+        .findings li::before { content: ""; position: absolute; left: 0.25rem; top: 1.25rem; width: 8px; height: 8px; border-radius: 50%; background: var(--gold-accent); }
+
+        blockquote {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            line-height: 1.5;
+            color: var(--primary-navy);
+            border-left: 4px solid var(--gold-accent);
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            margin-bottom: 2.25rem;
+            max-width: 960px;
+        }
+
+        /* Frequency versus distress visual */
+        .dissociation { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.25rem; align-items: stretch; }
+        .pole { border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border-light); background: var(--bg-white); }
+        .pole .tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; display: block; }
+        .pole.common .tag { color: var(--rich-teal); }
+        .pole.rare .tag { color: var(--gold-text); }
+        .pole.rare { border-color: var(--gold-accent); }
+        .pole h4 { font-size: 1.15rem; }
+        .meter { margin-top: 1rem; }
+        .meter-row { display: grid; grid-template-columns: 70px 1fr; gap: 0.6rem; align-items: center; font-size: 0.8rem; color: var(--text-light); margin-top: 0.5rem; }
+        .bar { height: 10px; border-radius: 999px; background: var(--border-light); overflow: hidden; }
+        .bar span { display: block; height: 100%; border-radius: 999px; }
+        .bar .freq { background: var(--rich-teal); }
+        .bar .dist { background: var(--gold-accent); }
+        .gap-badge { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 0.5rem; }
+        .gap-badge strong { font-family: var(--serif); font-size: 2.4rem; color: var(--primary-navy); line-height: 1; }
+        .gap-badge span { font-size: 0.8rem; color: var(--text-light); max-width: 110px; }
+        .caption { font-size: 0.95rem; color: var(--text-light); margin-top: 1rem; }
+
+        .arrow-list { list-style: none; display: grid; gap: 1.1rem; }
+        .arrow-list li { display: grid; grid-template-columns: 22px 1fr; gap: 0.75rem; }
+        .arrow-list li::before { content: "\2192"; color: var(--gold-accent); font-weight: 700; font-size: 1.1rem; line-height: 1.5; }
+        .arrow-list h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+        .arrow-list p { font-size: 0.93rem; line-height: 1.6; }
+
+        .domains { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+        .domain { background: var(--primary-navy); color: var(--bg-white); border-radius: 10px; padding: 1.1rem 1.25rem; }
+        .domain b { display: block; color: var(--gold-accent); font-size: 0.85rem; margin-bottom: 0.25rem; }
+        .domain span { font-size: 0.98rem; line-height: 1.4; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        th, td { text-align: left; padding: 0.7rem 0.75rem; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+        th { color: var(--primary-navy); font-weight: 600; border-bottom: 2px solid var(--gold-accent); }
+        td { color: var(--text-body); }
+        td:last-child { font-weight: 600; color: var(--primary-navy); white-space: nowrap; }
+
+        .boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .box { border: 1px solid var(--border-light); border-radius: 10px; padding: 1.1rem 1.25rem; background: var(--bg-white); }
+        .box h4 { font-size: 0.98rem; margin-bottom: 0.3rem; }
+        .box p { font-size: 0.9rem; line-height: 1.55; }
+
+        /* Closing */
+        .closing { text-align: center; }
+        .closing .intro { max-width: 640px; margin: 0 auto 2.5rem; font-size: 1.1rem; }
+        .closing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; text-align: left; }
+        .closing-grid .domain p { color: rgba(255, 255, 255, 0.88); font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; }
+        .closing-grid .domain a { color: var(--gold-accent); font-weight: 600; }
+        .closing-grid h4 { color: var(--bg-white); margin-bottom: 0; }
+        .btn {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            background: var(--rich-teal);
+            color: var(--bg-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: var(--primary-navy); }
+
+        footer { border-top: 1px solid var(--border-light); text-align: center; padding: 3rem; }
+        footer p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.5rem; }
+        footer a { text-decoration: none; font-weight: 500; }
+
+        @media (max-width: 1024px) {
+            nav ul { gap: 1.6rem; }
+            .paper-cards { grid-template-columns: 1fr 1fr; }
+            .paper-card, .paper-card:nth-child(4) { grid-column: auto; }
+            .paper-card:nth-child(5) { grid-column: 1 / -1; }
+            .two-col, .two-col.wide-left { grid-template-columns: 1fr; gap: 2.5rem; }
+            .closing-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            nav .container { flex-direction: column; gap: 1rem; padding: 0 1rem; }
+            nav ul { gap: 1.1rem 1.5rem; flex-wrap: wrap; justify-content: center; }
+            section { padding: 4rem 1rem; }
+            .cover { padding: 12rem 1rem 3.5rem; }
+            .cover h1 { font-size: 2.4rem; }
+            .cover .lede { font-size: 1.05rem; }
+            h2 { font-size: 1.9rem; }
+            blockquote { font-size: 1.15rem; }
+            .paper-cards { grid-template-columns: 1fr; }
+            .paper-card:nth-child(5) { grid-column: auto; }
+            .stats { grid-template-columns: 1fr; }
+            .dissociation { grid-template-columns: 1fr; }
+            .gap-badge { padding: 0.5rem 0; }
+            .gap-badge span { max-width: none; }
+            .domains, .boxes { grid-template-columns: 1fr; }
+            td:last-child { white-space: normal; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a class="logo" href="index.html">Dr. Vincent Jones II</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="research-portfolio.html" class="active" aria-current="page">Portfolio</a></li>
+                <li><a href="index.html#teaching">Teaching</a></li>
+                <li><a href="index.html#speaking">Speaking</a></li>
+                <li><a href="index.html#media">Media</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cover -->
+    <section class="cover">
+        <div class="container">
+            <span class="kicker">York College, The City University of New York</span>
+            <h1>Dating App Research Portfolio</h1>
+            <p class="lede">Five manuscripts examining digital harm, queer space, platform safety, and measurement science in dating applications.</p>
+
+            <div class="paper-cards">
+                <a class="paper-card" href="#paper-01">
+                    <span class="num">01</span>
+                    <h3>Digital Hetrification and Double Displacement</h3>
+                    <p class="authors">Vincent A. Jones II, Ed.D.; Laurie Essig, Ph.D.</p>
+                    <p>When straight users flood queer dating spaces like Grindr, they bring mainstream norms with them and erode what made those spaces safe in the first place. We call this digital hetrification.</p>
+                </a>
+                <a class="paper-card" href="#paper-02">
+                    <span class="num">02</span>
+                    <h3>Safer Than Before?</h3>
+                    <p class="authors">Vincent Jones II; Celeta Vanderpool; Erela Datuowei; Apeksha Mewani, Ed.D.; Erin Toussaint Jacques, Ph.D., Ed.D.</p>
+                    <p>We tracked safety features across 24 dating platforms over a year. Not one protects users after they report abuse, and most charge extra for basic safety tools.</p>
+                </a>
+                <a class="paper-card" href="#paper-03">
+                    <span class="num">03</span>
+                    <h3>Risk Factors, Protective Action, and the Frequency to Distress Dissociation</h3>
+                    <p class="authors">Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p>
+                    <p>The harms that happen most often on dating apps are not the ones that hurt people the most. We call this the frequency to distress dissociation, and it means platforms are measuring the wrong things.</p>
+                </a>
+                <a class="paper-card" href="#paper-04">
+                    <span class="num">04</span>
+                    <h3>Development and Validation of the DIHS-6D</h3>
+                    <p class="authors">Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p>
+                    <p>The first validated tool designed to measure what actually happens to people on dating apps, covering six domains of harm from harassment to stalking. No such instrument existed before.</p>
+                </a>
+                <a class="paper-card" href="#paper-05">
+                    <span class="num">05</span>
+                    <h3>Development and Validation of the DAHRSES</h3>
+                    <p class="authors">Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p>
+                    <p>A tool that measures whether people believe they can handle harmful situations on dating apps. Those who do are more likely to take protective action, which means these skills can be taught.</p>
+                </a>
+            </div>
+
+            <ul class="summary-strip">
+                <li>Five manuscripts</li>
+                <li>Two validated instruments</li>
+                <li>867 U.S. adult dating app users</li>
+                <li>24 platforms analyzed</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Paper 01 -->
+    <section id="paper-01">
+        <div class="container">
+            <span class="label">Paper 01 · Queer digital space</span>
+            <h2>Digital Hetrification and Double Displacement</h2>
+            <div class="paper-meta">
+                <p><b>Full title:</b> Digital Hetrification and Double Displacement: Straight Users and the Erosion of Queer Space on Grindr</p>
+                <p><b>Authors:</b> Vincent A. Jones II, Ed.D. (York College, The City University of New York); Laurie Essig, Ph.D. (Middlebury College)</p>
+            </div>
+            <div class="two-col">
+                <div class="col">
+                    <div>
+                        <h4>Central Argument</h4>
+                        <p>Hetrification, the process by which heterosexual people cumulatively displace queer culture from queer spaces, extends from physical venues into digital queer counterpublics like Grindr. Straight users bring mainstream norms with them, eroding the safety and cultural specificity that made these spaces valuable to lesbian, gay, bisexual, transgender, and queer communities.</p>
+                    </div>
+                    <div class="callout">
+                        <p><b>Key empirical finding:</b> In a general population sample of 867 dating app users, <b>30.9% of Grindr users identified as straight</b>, far exceeding the 1% to 7% reported in prior studies focused on men who have sex with men.</p>
+                    </div>
+                    <div>
+                        <h4>Original Contribution</h4>
+                        <p>The concept of <b>double displacement</b>: marginalized users face secondary marginalization within the queer counterpublic designed to shelter them, compounded by economic gatekeeping of safety features.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Three Mechanisms Proposed</h4>
+                    <div class="mechanisms">
+                        <div class="mechanism">
+                            <h4>Assumed Shared Identity Degradation</h4>
+                            <p>Straight users undermine the implicit trust and shared identity that define queer digital spaces.</p>
+                        </div>
+                        <div class="mechanism">
+                            <h4>Erosion of Community Norms</h4>
+                            <p>Community specific interaction norms are diluted as mainstream heteronormative expectations infiltrate the platform.</p>
+                        </div>
+                        <div class="mechanism">
+                            <h4>Platform Complicity</h4>
+                            <p>Structural enablement by the platform itself: design choices that allow and even encourage cross-community use without safeguards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper 02 -->
+    <section id="paper-02" class="alt">
+        <div class="container">
+            <span class="label">Paper 02 · Platform safety policy</span>
+            <h2>Safer Than Before?</h2>
+            <div class="paper-meta">
+                <p><b>Full title:</b> Safer Than Before? A Content Analysis of Safety Features and Policy Frameworks Across 24 Dating Platforms, 2025 to 2026</p>
+                <p><b>Authors:</b> Vincent Jones II; Celeta Vanderpool; Erela Datuowei; Apeksha Mewani, Ed.D.; Erin Toussaint Jacques, Ph.D., Ed.D.</p>
+                <p><b>Design:</b> Longitudinal content analysis of 24 North American dating platforms at two time points (April 2025 and April 2026) across 32 policy dimensions.</p>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-num">24</span>
+                    <h4>Platforms Analyzed</h4>
+                    <p>North American dating platforms assessed across 32 policy dimensions</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">0%</span>
+                    <h4>Post-Report Protection</h4>
+                    <p>Absent across all 24 platforms. No platform protects users after they report abuse.</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">71%</span>
+                    <h4>Paywalled Safety</h4>
+                    <p>17 of 24 platforms paywalled at least one safety relevant feature</p>
+                </div>
+            </div>
+            <div class="two-col wide-left">
+                <div class="col">
+                    <h4>Key Findings</h4>
+                    <ul class="findings">
+                        <li>Photo and identification verification increased from 1 to 9 platforms (p = .008)</li>
+                        <li>Post-report user protection was absent across all 24 platforms (0%)</li>
+                        <li>17 platforms (71%) paywalled at least one safety relevant feature</li>
+                        <li>Discrimination protections were entirely unchanged across the study period</li>
+                        <li>Composite safety scores ranged from 1.5 to 10 out of 12</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="callout warn">
+                        <p><b>Translation to practice:</b> Health educators should build programming on risk recognition, boundary setting, and critical evaluation of platform safety claims, because platforms cannot be relied upon to protect users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper 03 -->
+    <section id="paper-03">
+        <div class="container">
+            <span class="label">Paper 03 · Risk and protective action</span>
+            <h2>Risk Factors, Protective Action, and the Frequency to Distress Dissociation</h2>
+            <div class="paper-meta">
+                <p><b>Full title:</b> Risk Factors, Protective Action, and the Frequency to Distress Dissociation in Dating App Interpersonal Harm</p>
+                <p><b>Authors:</b> Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p>
+                <p><b>Sample:</b> 867 U.S. adults completing the Dating-App Interpersonal Harm Scale (DIHS-6D)</p>
+            </div>
+            <blockquote>The most common harms (unsolicited sexual content) were the <em>least</em> distressing; the rarest (stalking, coercion) were the <em>most</em> distressing. Item level rank gaps reached 29 positions.</blockquote>
+            <div class="two-col wide-left">
+                <div class="col">
+                    <div class="dissociation" role="img" aria-label="Unsolicited sexual content is the most frequent and least distressing harm; stalking and coercion are the least frequent and most distressing, with rank gaps of up to 29 positions.">
+                        <div class="pole common">
+                            <span class="tag">Most common</span>
+                            <h4>Unsolicited sexual messages and content</h4>
+                            <div class="meter">
+                                <div class="meter-row">Frequency <div class="bar"><span class="freq" style="width: 90%"></span></div></div>
+                                <div class="meter-row">Distress <div class="bar"><span class="dist" style="width: 22%"></span></div></div>
+                            </div>
+                        </div>
+                        <div class="gap-badge">
+                            <strong>29</strong>
+                            <span>positions between frequency and distress rank</span>
+                        </div>
+                        <div class="pole rare">
+                            <span class="tag">Rarest</span>
+                            <h4>Stalking, coercion, and threats</h4>
+                            <div class="meter">
+                                <div class="meter-row">Frequency <div class="bar"><span class="freq" style="width: 18%"></span></div></div>
+                                <div class="meter-row">Distress <div class="bar"><span class="dist" style="width: 92%"></span></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="caption">Bars are illustrative of rank order, not exact values. This dissociation shows that platform metrics based on report volume fundamentally misrepresent the psychological burden of dating app harm.</p>
+                </div>
+                <div class="col">
+                    <h4>Other Key Findings</h4>
+                    <ul class="arrow-list">
+                        <li><div><h4>Relationship Status as Predictor</h4><p>Married or partnered status was the strongest demographic predictor (Cohen's d = 0.78 compared with single users).</p></div></li>
+                        <li><div><h4>Platform Ecosystem as Risk Factor</h4><p>Use of apps oriented to lesbian, gay, bisexual, transgender, and queer users predicted harm beyond sexual minority identity. The <em>platform ecosystem</em>, not identity, is the proximal risk factor, refining Minority Stress Theory.</p></div></li>
+                        <li><div><h4>Sensitization, Not Habituation</h4><p>Cumulative lifetime exposure predicted greater distress. Repeated harm sensitizes rather than habituates.</p></div></li>
+                        <li><div><h4>Coercion Suppresses Action</h4><p>Sexual coercion <em>suppressed</em> rather than mobilized protective action, a critical finding for intervention design.</p></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper 04 -->
+    <section id="paper-04" class="alt">
+        <div class="container">
+            <span class="label">Paper 04 · Measurement</span>
+            <h2>Development and Validation of the DIHS-6D</h2>
+            <div class="paper-meta">
+                <p><b>Full title:</b> Development and Initial Validation of the Dating-App Interpersonal Harm Scale (DIHS-6D)</p>
+                <p><b>Authors:</b> Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p>
+                <p><b>Sample:</b> N = 867 · 31 item self-report instrument · <a href="https://doi.org/10.2139/ssrn.6753965" target="_blank" rel="noopener">Read the preprint</a></p>
+            </div>
+            <div class="two-col">
+                <div class="col">
+                    <h4>Six Domains of Harm</h4>
+                    <div class="domains">
+                        <div class="domain"><b>01</b><span>Unwanted Sexual Boundary Violations</span></div>
+                        <div class="domain"><b>02</b><span>Sexual Coercion</span></div>
+                        <div class="domain"><b>03</b><span>Harassment and Threats</span></div>
+                        <div class="domain"><b>04</b><span>Exploitation and Instrumental Deception</span></div>
+                        <div class="domain"><b>05</b><span>Identity-Based Discrimination</span></div>
+                        <div class="domain"><b>06</b><span>Safety Intrusion and Stalking</span></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Psychometric Performance</h4>
+                    <table>
+                        <thead><tr><th>Metric</th><th>Result</th></tr></thead>
+                        <tbody>
+                            <tr><td>Content validity, relevance (Aiken's V)</td><td>.92</td></tr>
+                            <tr><td>Content validity, clarity (Aiken's V)</td><td>.89</td></tr>
+                            <tr><td>Confirmatory factor analysis fit: Comparative Fit Index</td><td>.908</td></tr>
+                            <tr><td>Confirmatory factor analysis fit: Root Mean Square Error of Approximation</td><td>.079</td></tr>
+                            <tr><td>Item loadings range</td><td>.662 to .893</td></tr>
+                            <tr><td>Domain internal consistency (Cronbach's alpha)</td><td>.875 to .931</td></tr>
+                            <tr><td>Full scale internal consistency (Cronbach's alpha)</td><td>.965</td></tr>
+                            <tr><td>Convergent validity with established victimization measures (r)</td><td>.633 and .747</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="callout good">
+                        <p><b>Why it matters:</b> No prior validated instrument existed for harms specific to dating apps. The DIHS-6D is freely available for research use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper 05 -->
+    <section id="paper-05">
+        <div class="container">
+            <span class="label">Paper 05 · Self-efficacy</span>
+            <h2>Development and Validation of the DAHRSES</h2>
+            <div class="paper-meta">
+                <p><b>Full title:</b> Development and Initial Validation of the Dating-App Harm Response Self-Efficacy Scale (DAHRSES)</p>
+                <p><b>Authors:</b> Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p>
+                <p>Adapted from the General Self-Efficacy Scale (Schwarzer and Jerusalem, 1995) and grounded in Bandura's social cognitive theory.</p>
+            </div>
+            <div class="two-col">
+                <div class="col">
+                    <h4>Psychometric Performance</h4>
+                    <div class="boxes">
+                        <div class="box"><h4>Sample</h4><p>Full sample N = 461; subsample n = 253 for discriminant and criterion validity analyses</p></div>
+                        <div class="box"><h4>Internal Consistency</h4><p>Cronbach's alpha = .920, excellent reliability across the 10 item scale</p></div>
+                        <div class="box"><h4>Factor Structure</h4><p>Well fitting unidimensional structure confirmed through confirmatory factor analysis</p></div>
+                        <div class="box"><h4>Convergent Validity</h4><p>Correlation with the General Self-Efficacy Scale: r = .489 to .619, p &lt; .001</p></div>
+                        <div class="box"><h4>Discriminant Validity</h4><p>Modest correlation with social desirability (r = .203), lower than the General Self-Efficacy Scale benchmark</p></div>
+                        <div class="box"><h4>Criterion Validity</h4><p>Positive association with protective behavior use (r = .185), strengthening after controlling for harm frequency (r = .229)</p></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>The Core Insight</h4>
+                    <blockquote>Those who believe they can handle harmful situations on dating apps are more likely to take protective action, which means these skills can be taught.</blockquote>
+                    <p>The link between DAHRSES scores and actual protective behavior identifies harm response self-efficacy as a <b>modifiable target for health education intervention</b>. Unlike platform safety features that remain inaccessible or absent, self-efficacy is a skill that can be cultivated through structured programming.</p>
+                    <div class="callout good">
+                        <p><b>Intervention implication:</b> Health educators can design curricula that build confidence in responding to dating app harm, translating directly into safer user behavior regardless of platform safety infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="alt closing">
+        <div class="container">
+            <h2>Collaborate or Request an Instrument</h2>
+            <p class="intro">Questions, collaboration inquiries, and requests for instruments are welcome.</p>
+            <div class="closing-grid">
+                <div class="domain">
+                    <h4>Vincent A. Jones II, Ed.D., M.A.</h4>
+                    <p>Assistant Professor of Community Health<br>Health Promotion Management Program Coordinator<br>Department of Health and Human Performance<br>York College, The City University of New York</p>
+                </div>
+                <div class="domain">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:vjones1@york.cuny.edu">vjones1@york.cuny.edu</a></p>
+                    <p>For instrument access (DIHS-6D, DAHRSES), collaboration on dating app safety research, or questions about any manuscript in this portfolio.</p>
+                </div>
+                <div class="domain">
+                    <h4>Portfolio Summary</h4>
+                    <p>Five manuscripts · Two validated instruments · One research program examining digital harm, queer space, platform safety, and measurement science in dating applications.</p>
+                </div>
+            </div>
+            <a href="mailto:vjones1@york.cuny.edu?subject=Dating%20App%20Research%20Portfolio" class="btn">Email Dr. Jones</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Dr. Vincent Jones II</p>
+        <p><a href="index.html">Home</a> &middot; <a href="mailto:vjones1@york.cuny.edu">vjones1@york.cuny.edu</a> &middot; <a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener">Curriculum vitae</a> &middot; <a href="https://www.linkedin.com/in/vincentjonesii/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://orcid.org/0000-0002-1220-6976" target="_blank" rel="noopener">ORCID</a></p>
+    </footer>
+</body>
+</html>
