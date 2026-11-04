@@ -23,6 +23,9 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -36,7 +39,10 @@
             --gold-accent: #D4AF37;
             --light-teal: #E0F2F7;
             --text-dark: #1a1a1a;
-            --text-light: #64748B;
+            --text-light: #5B6B80;
+            --text-body: #334155;
+            --gold-text: #8A6A12;
+            --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
             --bg-white: #ffffff;
             --bg-off-white: #F8FAFC;
             --border-light: #E2E8F0;
@@ -156,7 +162,8 @@
             margin-bottom: 0.75rem;
             line-height: 1.08;
             font-weight: 600;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.015em;
+            font-family: var(--serif);
             color: var(--bg-white);
         }
 
@@ -246,7 +253,7 @@
 
         /* Sections */
         section {
-            padding: 6rem 3rem;
+            padding: 4.75rem 3rem;
         }
 
         .container {
@@ -255,10 +262,11 @@
         }
 
         h2 {
-            font-size: 3rem;
-            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
             font-weight: 600;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.01em;
+            font-family: var(--serif);
             color: var(--primary-navy);
         }
 
@@ -299,7 +307,7 @@
 
         .about-text p {
             margin-bottom: 2rem;
-            color: var(--text-light);
+            color: var(--text-body);
             font-size: 1.05rem;
             line-height: 1.8;
         }
@@ -317,7 +325,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.3rem;
-            border-left: 3px solid var(--rich-teal);
+            border-left: 3px solid var(--gold-accent);
             padding-left: 1rem;
         }
 
@@ -331,7 +339,7 @@
         .credential-field {
             font-size: 0.95rem;
             font-weight: 600;
-            color: var(--rich-teal);
+            color: var(--gold-text);
             line-height: 1.35;
         }
 
@@ -394,6 +402,7 @@
         }
 
         .education-text h3 {
+            font-family: var(--serif);
             color: var(--primary-navy);
             font-size: 1.5rem;
             font-weight: 600;
@@ -413,16 +422,17 @@
             margin-bottom: 2rem;
             border-radius: 12px;
             border: 1px solid var(--border-light);
-            border-left: 4px solid var(--rich-teal);
+            border-left: 4px solid var(--gold-accent);
             transition: all 0.2s;
         }
 
         .publication:hover {
             box-shadow: 0 4px 30px rgba(8, 145, 178, 0.08);
-            border-left-color: var(--gold-accent);
+            border-left-color: var(--primary-navy);
         }
 
         .publication h3 {
+            font-family: var(--serif);
             color: var(--primary-navy);
             margin-bottom: 0.75rem;
             font-size: 1.4rem;
@@ -436,7 +446,7 @@
         }
 
         .publication p {
-            color: var(--text-light);
+            color: var(--text-body);
             line-height: 1.8;
             font-size: 1.05rem;
         }
@@ -495,7 +505,7 @@
         }
 
         .pub-list li {
-            color: var(--text-light);
+            color: var(--text-body);
             font-size: 0.95rem;
             line-height: 1.6;
             padding: 0.9rem 0;
@@ -526,10 +536,22 @@
         }
 
         .contact-line p {
-            color: var(--text-light);
+            color: var(--text-body);
             font-size: 1.1rem;
             line-height: 1.7;
             margin-bottom: 1.75rem;
+        }
+
+        .contact h2 {
+            color: var(--bg-white);
+        }
+
+        .contact .contact-line p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .contact .contact-also a {
+            color: #7DD8EC;
         }
 
         .contact-line .contact-also {
@@ -559,7 +581,7 @@
         }
 
         .teaching-intro p {
-            color: var(--text-light);
+            color: var(--text-body);
             font-size: 1.1rem;
             line-height: 1.8;
         }
@@ -575,7 +597,7 @@
             margin: 3rem 0 1.25rem;
             padding-bottom: 0.75rem;
             border-bottom: 2px solid var(--gold-accent);
-            max-width: 860px;
+            max-width: none;
         }
 
         .courses-note {
@@ -600,7 +622,7 @@
         .course-grid li {
             background: var(--bg-white);
             border: 1px solid var(--border-light);
-            border-left: 3px solid var(--rich-teal);
+            border-left: 3px solid var(--gold-accent);
             border-radius: 10px;
             padding: 1rem 1.25rem;
             display: flex;
@@ -682,7 +704,7 @@
         }
 
         .media-card .source {
-            color: var(--rich-teal);
+            color: var(--gold-text);
             font-weight: 600;
             margin-bottom: 0.75rem;
             display: block;
@@ -692,16 +714,16 @@
         }
 
         .media-card p {
-            color: var(--text-light);
+            color: var(--text-body);
             line-height: 1.7;
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
         }
 
         .media-card a {
-            color: var(--primary-navy);
+            color: var(--rich-teal);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
@@ -710,7 +732,7 @@
         }
 
         .media-card a:hover {
-            color: var(--gold-accent);
+            color: var(--primary-navy);
         }
 
         /* Speaking Section */
@@ -733,6 +755,7 @@
         }
 
         .speaking-topics h3 {
+            font-family: var(--serif);
             font-size: 1.8rem;
             margin-bottom: 2.5rem;
             font-weight: 600;
@@ -780,6 +803,7 @@
         }
 
         .recent-talks h3 {
+            font-family: var(--serif);
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             font-weight: 600;
@@ -844,7 +868,9 @@
 
         /* Contact Section */
         .contact {
-            background: var(--bg-white);
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #1a4d7a 100%);
+            color: var(--bg-white);
+            text-align: center;
         }
 
         .contact-grid {
@@ -1090,7 +1116,7 @@
 
             h2 {
                 font-size: 2rem;
-                margin-bottom: 2.5rem;
+                margin-bottom: 1.75rem;
             }
 
             .publication {
