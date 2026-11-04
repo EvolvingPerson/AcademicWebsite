@@ -374,6 +374,38 @@
             line-height: 1.6;
         }
 
+        .education {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-top: 4.5rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .education-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            object-position: center 20%;
+            border-radius: 12px;
+            box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+        }
+
+        .education-text h3 {
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.75rem;
+        }
+
+        .education .credentials {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
         /* Research Section */
         .publication {
             background: var(--bg-white);
@@ -727,6 +759,7 @@
             width: 100%;
             height: 440px;
             object-fit: cover;
+            object-position: 38% center;
             border-radius: 12px;
             box-shadow: 0 4px 40px rgba(0,0,0,0.06);
         }
@@ -951,6 +984,15 @@
                 top: 0;
             }
 
+            .education {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .education-image img {
+                height: 380px;
+            }
+
             .speaking-content {
                 grid-template-columns: 1fr;
             }
@@ -1115,29 +1157,38 @@
                     <p>His training spans the areas the work draws on together: a bachelor’s in sociology and anthropology, a master’s in education policy, a doctorate in health education, and credentialing as a Master Certified Health Education Specialist. That combination is why the research moves between social context, measurement, platform policy, and what can actually be taught in a classroom.</p>
                     <p><a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener" style="color: var(--rich-teal); font-weight: 600;">Download curriculum vitae (PDF) &rarr;</a></p>
 
-                    <div class="credentials">
-                        <div class="credential">
-                            <span class="credential-abbr">Ed.D.</span>
-                            <span class="credential-field">Health Education</span>
-                            <span class="credential-place">Teachers College, Columbia University, 2020</span>
-                        </div>
-                        <div class="credential">
-                            <span class="credential-abbr">M.A.</span>
-                            <span class="credential-field">Education Policy</span>
-                            <span class="credential-place">Teachers College, Columbia University, 2014</span>
-                        </div>
-                        <div class="credential">
-                            <span class="credential-abbr">B.A.</span>
-                            <span class="credential-field">Sociology and Anthropology</span>
-                            <span class="credential-place">Middlebury College</span>
-                        </div>
-                        <div class="credential">
-                            <span class="credential-abbr">MCHES</span>
-                            <span class="credential-field">Master Certified Health Education Specialist</span>
-                            <span class="credential-place">National Commission for Health Education Credentialing</span>
-                        </div>
-                    </div>
 
+                </div>
+            </div>
+
+            <div class="education">
+                <div class="education-image">
+                    <img src="graduation-photo.jpg" alt="Dr. Vincent Jones II in doctoral regalia" loading="lazy">
+                </div>
+                <div class="education-text">
+                    <h3>Education and Credentials</h3>
+                            <div class="credentials">
+                                <div class="credential">
+                                    <span class="credential-abbr">Ed.D.</span>
+                                    <span class="credential-field">Health Education</span>
+                                    <span class="credential-place">Teachers College, Columbia University, 2020</span>
+                                </div>
+                                <div class="credential">
+                                    <span class="credential-abbr">M.A.</span>
+                                    <span class="credential-field">Education Policy</span>
+                                    <span class="credential-place">Teachers College, Columbia University, 2014</span>
+                                </div>
+                                <div class="credential">
+                                    <span class="credential-abbr">B.A.</span>
+                                    <span class="credential-field">Sociology and Anthropology</span>
+                                    <span class="credential-place">Middlebury College</span>
+                                </div>
+                                <div class="credential">
+                                    <span class="credential-abbr">MCHES</span>
+                                    <span class="credential-field">Master Certified Health Education Specialist</span>
+                                    <span class="credential-place">National Commission for Health Education Credentialing</span>
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>
@@ -1228,8 +1279,7 @@
                     </ul>
                 </div>
                 <div class="speaking-image">
-                    <!-- GitHub Image Path: /speaking-photo.jpg (root folder) -->
-                    <img src="speaking-photo.jpg" alt="Dr. Vincent Jones II" loading="lazy">
+                    <img src="speaking-photo-2026.jpg" alt="Dr. Vincent Jones II speaking at a York College event" loading="lazy">
                 </div>
             </div>
             <div class="recent-talks">
