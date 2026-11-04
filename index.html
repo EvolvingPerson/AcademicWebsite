@@ -1153,6 +1153,49 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Dating App Research Portfolio preview */
+        .portfolio-preview { margin: 0 0 3rem; }
+        .portfolio-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+        .portfolio-head h3 { font-family: var(--serif); color: var(--primary-navy); font-size: 1.6rem; font-weight: 600; }
+        .portfolio-head a, .pcard-more { color: var(--rich-teal); font-weight: 600; text-decoration: none; }
+        .portfolio-intro { color: var(--text-light); margin-bottom: 1.5rem; }
+        .portfolio-cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; }
+        .pcard { grid-column: span 2; display: flex; flex-direction: column; background: var(--bg-white); border: 1px solid var(--border-light); border-top: 4px solid var(--primary-navy); border-radius: 12px; padding: 1.5rem; text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s; }
+        .pcard:nth-child(4) { grid-column: 2 / span 2; }
+        .pcard:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(8, 145, 178, 0.12); border-top-color: var(--gold-accent); }
+        .pcard-num { align-self: flex-start; background: var(--gold-accent); color: var(--primary-navy); font-weight: 700; font-size: 0.8rem; padding: 0.2rem 0.6rem; border-radius: 6px; margin-bottom: 0.9rem; }
+        .pcard h4 { font-family: var(--serif); color: var(--primary-navy); font-size: 1.15rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.4rem; }
+        .pcard-authors { flex: 0 0 auto !important; font-size: 0.82rem; font-style: italic; color: var(--text-light); padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+        .pcard p { color: var(--text-body); font-size: 0.95rem; line-height: 1.65; flex: 1; }
+        .pcard-more { margin-top: 1rem; font-size: 0.92rem; }
+        @media (max-width: 1024px) {
+            .portfolio-cards { grid-template-columns: 1fr 1fr; }
+            .pcard, .pcard:nth-child(4) { grid-column: auto; }
+            .pcard:nth-child(5) { grid-column: 1 / -1; }
+        }
+        @media (max-width: 768px) {
+            .portfolio-cards { grid-template-columns: 1fr; }
+            .pcard:nth-child(5) { grid-column: auto; }
+        }
+
+        nav ul a, nav ul li { white-space: nowrap; }
+
+        @media (max-width: 1280px) and (min-width: 769px) {
+            nav .container { padding: 0 2rem; gap: 1.5rem; }
+            nav ul { gap: 1.4rem; }
+        }
+
+        @media (max-width: 1060px) and (min-width: 961px) {
+            nav ul { gap: 1.1rem; }
+            nav ul a { font-size: 0.88rem; }
+        }
+
+        @media (max-width: 960px) {
+            nav { padding: 1rem 0; }
+            nav .container { flex-direction: column; gap: 0.6rem; padding: 0 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.1rem; }
+            nav ul a { font-size: 0.88rem; }
+        }
     </style>
 </head>
 <body>
@@ -1162,8 +1205,8 @@
             <div class="logo">Dr. Vincent Jones II</div>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="research-portfolio.html">Portfolio</a></li>
+                <li><a href="#research">Publications</a></li>
+                <li><a href="research-portfolio.html">Dating App Research</a></li>
                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#speaking">Speaking</a></li>
                 <li><a href="#media">Media</a></li>
@@ -1267,7 +1310,18 @@
                 </div>
                 <p>Dr. Jones leads a research program on what happens to people on dating apps, who gets hurt most, and what actually protects them. With colleagues at York College and Lehman College, he developed two instruments: the Dating-App Interpersonal Harm Scale (DIHS-6D), which asks about six kinds of harm, both how often each happens and how much it hurts, and the Dating-App Harm Response Self-Efficacy Scale (DAHRSES), which measures confidence in responding.</p>
                 <p>The most common harms turned out to be the least distressing, and the rarest the most. The harms that hurt most, pressure after saying no and being tracked or found offline, are the ones blocking and reporting reach least. Harm concentrated among women, people of color, sexual and gender minorities, and people who conceal their app use. Confidence in responding predicted protective action over and above how much harm a person had experienced, which means part of the answer can be taught.</p>
-                <p><a href="research-portfolio.html" style="color: var(--rich-teal); font-weight: 600;">Explore the full Dating App Research Portfolio &rarr;</a></p>
+            </div>
+
+            <div class="portfolio-preview">
+                <div class="portfolio-head"><h3>Dating App Research Portfolio</h3><a href="research-portfolio.html">View the full portfolio &rarr;</a></div>
+                <p class="portfolio-intro">Five manuscripts examining digital harm, queer space, platform safety, and measurement science in dating applications.</p>
+                <div class="portfolio-cards">
+                    <a class="pcard" href="research-portfolio.html#paper-01"><span class="pcard-num">01</span><h4>Digital Hetrification and Double Displacement</h4><p class="pcard-authors">Vincent A. Jones II, Ed.D.; Laurie Essig, Ph.D.</p><p>When straight users flood queer dating spaces like Grindr, they bring mainstream norms with them and erode what made those spaces safe in the first place. We call this digital hetrification.</p><span class="pcard-more">Read more &rarr;</span></a>
+                    <a class="pcard" href="research-portfolio.html#paper-02"><span class="pcard-num">02</span><h4>Safer Than Before?</h4><p class="pcard-authors">Vincent Jones II; Celeta Vanderpool; Erela Datuowei; Apeksha Mewani, Ed.D.; Erin Toussaint Jacques, Ph.D., Ed.D.</p><p>We tracked safety features across 24 dating platforms over a year. Not one protects users after they report abuse, and most charge extra for basic safety tools.</p><span class="pcard-more">Read more &rarr;</span></a>
+                    <a class="pcard" href="research-portfolio.html#paper-03"><span class="pcard-num">03</span><h4>Risk Factors, Protective Action, and the Frequency to Distress Dissociation</h4><p class="pcard-authors">Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p><p>The harms that happen most often on dating apps are not the ones that hurt people the most. We call this the frequency to distress dissociation, and it means platforms are measuring the wrong things.</p><span class="pcard-more">Read more &rarr;</span></a>
+                    <a class="pcard" href="research-portfolio.html#paper-04"><span class="pcard-num">04</span><h4>Development and Validation of the DIHS-6D</h4><p class="pcard-authors">Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p><p>The first validated tool designed to measure what actually happens to people on dating apps, covering six domains of harm from harassment to stalking. No such instrument existed before.</p><span class="pcard-more">Read more &rarr;</span></a>
+                    <a class="pcard" href="research-portfolio.html#paper-05"><span class="pcard-num">05</span><h4>Development and Validation of the DAHRSES</h4><p class="pcard-authors">Vincent Jones II; Erin Toussaint Jacques, Ph.D., Ed.D.; Apeksha Mewani, Ed.D.</p><p>A tool that measures whether people believe they can handle harmful situations on dating apps. Those who do are more likely to take protective action, which means these skills can be taught.</p><span class="pcard-more">Read more &rarr;</span></a>
+                </div>
             </div>
 
             <div class="pubs">

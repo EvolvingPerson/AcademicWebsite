@@ -334,6 +334,24 @@
             .domains, .boxes { grid-template-columns: 1fr; }
             td:last-child { white-space: normal; }
         }
+        nav ul a, nav ul li { white-space: nowrap; }
+
+        @media (max-width: 1280px) and (min-width: 769px) {
+            nav .container { padding: 0 2rem; gap: 1.5rem; }
+            nav ul { gap: 1.4rem; }
+        }
+
+        @media (max-width: 1060px) and (min-width: 961px) {
+            nav ul { gap: 1.1rem; }
+            nav ul a { font-size: 0.88rem; }
+        }
+
+        @media (max-width: 960px) {
+            nav { padding: 1rem 0; }
+            nav .container { flex-direction: column; gap: 0.6rem; padding: 0 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.1rem; }
+            nav ul a { font-size: 0.88rem; }
+        }
     </style>
 </head>
 <body>
@@ -342,8 +360,8 @@
             <a class="logo" href="index.html">Dr. Vincent Jones II</a>
             <ul>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#research">Research</a></li>
-                <li><a href="research-portfolio.html" class="active" aria-current="page">Portfolio</a></li>
+                <li><a href="index.html#research">Publications</a></li>
+                <li><a href="research-portfolio.html" class="active" aria-current="page">Dating App Research</a></li>
                 <li><a href="index.html#teaching">Teaching</a></li>
                 <li><a href="index.html#speaking">Speaking</a></li>
                 <li><a href="index.html#media">Media</a></li>
@@ -356,7 +374,7 @@
     <!-- Cover -->
     <section class="cover">
         <div class="container">
-            <span class="kicker">York College, The City University of New York</span>
+            <span class="kicker">Dr. Vincent Jones II</span>
             <h1>Dating App Research Portfolio</h1>
             <p class="lede">Five manuscripts examining digital harm, queer space, platform safety, and measurement science in dating applications.</p>
 
