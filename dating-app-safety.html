@@ -395,6 +395,22 @@
         .fine { font-size: 0.9rem; color: var(--text-light); margin-top: 1.25rem; max-width: 960px; }
         @media (max-width: 1024px) { .facts { grid-template-columns: 1fr 1fr; } .rank { grid-template-columns: 140px 1fr 60px; } .r-pay { grid-column: 1 / -1; } }
         @media (max-width: 768px) { .facts { grid-template-columns: 1fr; } .rank { grid-template-columns: 1fr 56px; gap: 0.4rem 0.75rem; } .r-bar { grid-column: 1 / -1; grid-row: 2; } .r-pay { grid-row: 3; } }
+
+        .sub-h { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--primary-navy); margin: 3rem 0 1.25rem; }
+        .how { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .how-step { display: grid; grid-template-columns: 2.4rem 1fr; gap: 1rem; background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 12px; padding: 1.4rem; }
+        .how-step p { font-size: 0.95rem; line-height: 1.65; }
+        .fgroups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+        .fgroup { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 12px; padding: 1.4rem; }
+        .fgroup ul { list-style: none; display: grid; gap: 0.85rem; margin-top: 0.75rem; }
+        .fgroup li { display: grid; grid-template-columns: 1fr 64px; gap: 0.3rem 0.75rem; align-items: center; }
+        .f-name { font-size: 0.92rem; color: var(--text-body); line-height: 1.35; }
+        .f-n { grid-row: 1 / span 2; grid-column: 2; text-align: right; font-weight: 700; color: var(--primary-navy); }
+        .f-n small { font-weight: 400; color: var(--text-light); font-size: 0.72rem; }
+        .f-bar { height: 8px; background: var(--border-light); border-radius: 999px; overflow: hidden; }
+        .f-bar span { display: block; height: 100%; background: var(--rich-teal); border-radius: 999px; }
+        @media (max-width: 1024px) { .fgroups { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .how, .fgroups { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -512,7 +528,7 @@
             <span class="label">How 24 dating apps compare</span>
             <h2>Which apps document the most safety?</h2>
             <div class="intro-text">
-                <p>My team read the public safety pages, terms of service, and help pages of 24 North American dating platforms in April 2025 and again in April 2026. We scored each one on 12 safety features it documents, such as reporting, photo verification, safety tips, and clear rules against harassment and discrimination.</p>
+                <p>My team read the public safety pages, terms of service, and help pages of 24 North American dating platforms on April 2, 2025, and again on April 2, 2026. We checked whether each platform documents specific safety tools, rules against harassment and discrimination, privacy practices, and what it charges for, then gave each platform a score out of 12.</p>
                 <p>A higher score means the app <b>says</b> it does more. It does not prove the app is safer to use, and no score replaces the eight steps above.</p>
             </div>
 
@@ -523,16 +539,26 @@
                 <div class="fact"><span class="stat-num">0</span><h4>Updated anti-discrimination rules</h4><p>Not one platform changed its discrimination policies between 2025 and 2026.</p></div>
             </div>
 
+
+            <h3 class="sub-h">How the score works</h3>
+            <div class="how">
+                <div class="how-step"><span class="step-num">1</span><div><h4>Pick the platforms</h4><p>We started with the 120 most popular dating apps in North American app stores. We kept 24 that were still operating, published enough about their safety practices to code, and were not near copies of another app from the same company. Seven belong to Match Group, four to Spark Networks, and 13 are independent.</p></div></div>
+                <div class="how-step"><span class="step-num">2</span><div><h4>Read what each app publishes</h4><p>Terms of service, community guidelines, and safety centers or safety tips pages. In 2026 we also checked app store listings, help pages, and press releases. We did not test features inside the apps, so the study shows what platforms say, not what users experience.</p></div></div>
+                <div class="how-step"><span class="step-num">3</span><div><h4>Code each feature</h4><p>A feature counts as 1 if the app clearly describes it, 0.5 if it is only partly or indirectly described, and 0 if we could find nothing. AI tools pulled the exact policy text, and a research assistant checked every platform against the original pages. Two coders independently re-coded six platforms and agreed on 101 of 102 decisions.</p></div></div>
+                <div class="how-step"><span class="step-num">4</span><div><h4>Add it up</h4><p>Each platform&rsquo;s score adds up 12 safety dimensions, all weighted equally, for a maximum of 12. We call 9 or more high, 5 to 8.9 moderate, and below 5 low. A high score means broad documentation, not proof that a feature works.</p></div></div>
+            </div>
+
+            <h3 class="sub-h">The scores</h3>
             <h4>Documented safety score, April 2026 (out of 12)</h4>
-            <div class="legend"><span><i class="hi"></i>8 or higher</span><span><i class="mid"></i>5 to 7.5</span><span><i class="lo"></i>Below 5</span><span>Average: 5.5</span></div>
+            <div class="legend"><span><i class="hi"></i>High: 9 or more</span><span><i class="mid"></i>Moderate: 5 to 8.9</span><span><i class="lo"></i>Low: below 5</span><span>Average across all 24: 5.5</span></div>
             <ul class="ranks">
                 <li class="rank hi"><span class="r-name">Tinder</span><span class="r-bar"><span style="width:83.3%"></span></span><span class="r-score">10<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Hiding your profile (Incognito Mode)</span></li>
                 <li class="rank hi"><span class="r-name">Bumble</span><span class="r-bar"><span style="width:83.3%"></span></span><span class="r-score">10<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Hiding your profile (Incognito Mode)</span></li>
                 <li class="rank hi"><span class="r-name">Grindr</span><span class="r-bar"><span style="width:79.2%"></span></span><span class="r-score">9.5<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Disguising the app icon; hiding your profile</span></li>
-                <li class="rank hi"><span class="r-name">Taimi</span><span class="r-bar"><span style="width:70.8%"></span></span><span class="r-score">8.5<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
-                <li class="rank hi"><span class="r-name">OkCupid</span><span class="r-bar"><span style="width:66.7%"></span></span><span class="r-score">8<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
-                <li class="rank hi"><span class="r-name">Match</span><span class="r-bar"><span style="width:66.7%"></span></span><span class="r-score">8<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Messaging people who have not matched with you</span></li>
-                <li class="rank hi"><span class="r-name">Plenty of Fish</span><span class="r-bar"><span style="width:66.7%"></span></span><span class="r-score">8<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
+                <li class="rank mid"><span class="r-name">Taimi</span><span class="r-bar"><span style="width:70.8%"></span></span><span class="r-score">8.5<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
+                <li class="rank mid"><span class="r-name">OkCupid</span><span class="r-bar"><span style="width:66.7%"></span></span><span class="r-score">8<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
+                <li class="rank mid"><span class="r-name">Match</span><span class="r-bar"><span style="width:66.7%"></span></span><span class="r-score">8<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Messaging people who have not matched with you</span></li>
+                <li class="rank mid"><span class="r-name">Plenty of Fish</span><span class="r-bar"><span style="width:66.7%"></span></span><span class="r-score">8<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
                 <li class="rank mid"><span class="r-name">Hinge</span><span class="r-bar"><span style="width:58.3%"></span></span><span class="r-score">7<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
                 <li class="rank mid"><span class="r-name">eHarmony</span><span class="r-bar"><span style="width:45.8%"></span></span><span class="r-score">5.5<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Messaging, photos, Video Date, and SecureCall</span></li>
                 <li class="rank mid"><span class="r-name">Feeld</span><span class="r-bar"><span style="width:45.8%"></span></span><span class="r-score">5.5<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Hiding your profile (Incognito Mode)</span></li>
@@ -551,7 +577,11 @@
                 <li class="rank lo"><span class="r-name">Jack&rsquo;d</span><span class="r-bar"><span style="width:20.8%"></span></span><span class="r-score">2.5<small>/12</small></span><span class="r-pay"><span class="free">No safety feature behind a paywall found</span></span></li>
                 <li class="rank lo"><span class="r-name">Raya</span><span class="r-bar"><span style="width:12.5%"></span></span><span class="r-score">1.5<small>/12</small></span><span class="r-pay"><b>Charges for:</b> Everything (no free tier)</span></li>
             </ul>
-            <p class="fine">Source: Jones, Vanderpool, Datuowei, Mewani, and Toussaint Jacques, &ldquo;Safer Than Before? A Content Analysis of Safety Features and Policy Frameworks Across 24 North American Dating Platforms, 2025 to 2026&rdquo; (submitted). Scores reflect publicly available documentation on April 2, 2026; apps change their features often. &ldquo;Charges for&rdquo; lists safety-related features found behind a paywall.</p>
+
+            <h3 class="sub-h">What we checked, and how many of the 24 document it</h3>
+            <div class="fgroups"><div class="fgroup"><h4>Safety tools</h4><ul><li><span class="f-name">Safety tips or a safety center</span><span class="f-bar"><span style="width:87.5%"></span></span><span class="f-n">21<small> of 24</small></span></li><li><span class="f-name">A way to report someone</span><span class="f-bar"><span style="width:91.7%"></span></span><span class="f-n">22<small> of 24</small></span></li><li><span class="f-name">Video chat before meeting</span><span class="f-bar"><span style="width:37.5%"></span></span><span class="f-n">9<small> of 24</small></span></li><li><span class="f-name">Photo or ID verification</span><span class="f-bar"><span style="width:37.5%"></span></span><span class="f-n">9<small> of 24</small></span></li><li><span class="f-name">Guidance for meeting in person</span><span class="f-bar"><span style="width:33.3%"></span></span><span class="f-n">8<small> of 24</small></span></li><li><span class="f-name">Warnings before a ban for minor violations</span><span class="f-bar"><span style="width:29.2%"></span></span><span class="f-n">7<small> of 24</small></span></li><li><span class="f-name">Protection after you report</span><span class="f-bar"><span style="width:0.0%"></span></span><span class="f-n">0<small> of 24</small></span></li></ul></div><div class="fgroup"><h4>Rules against harm</h4><ul><li><span class="f-name">Bans racism</span><span class="f-bar"><span style="width:100.0%"></span></span><span class="f-n">24<small> of 24</small></span></li><li><span class="f-name">Bans bullying and doxing</span><span class="f-bar"><span style="width:91.7%"></span></span><span class="f-n">22<small> of 24</small></span></li><li><span class="f-name">Bans sexism</span><span class="f-bar"><span style="width:91.7%"></span></span><span class="f-n">22<small> of 24</small></span></li><li><span class="f-name">Bans homophobia</span><span class="f-bar"><span style="width:91.7%"></span></span><span class="f-n">22<small> of 24</small></span></li><li><span class="f-name">Bans ableism</span><span class="f-bar"><span style="width:87.5%"></span></span><span class="f-n">21<small> of 24</small></span></li><li><span class="f-name">Uses specific, detailed rule language</span><span class="f-bar"><span style="width:87.5%"></span></span><span class="f-n">21<small> of 24</small></span></li><li><span class="f-name">Includes LGBTQ+ inclusive language</span><span class="f-bar"><span style="width:41.7%"></span></span><span class="f-n">10<small> of 24</small></span></li></ul></div><div class="fgroup"><h4>Privacy practices</h4><ul><li><span class="f-name">Cooperates with law enforcement requests</span><span class="f-bar"><span style="width:95.8%"></span></span><span class="f-n">23<small> of 24</small></span></li><li><span class="f-name">Says it anonymizes data shared with others</span><span class="f-bar"><span style="width:87.5%"></span></span><span class="f-n">21<small> of 24</small></span></li><li><span class="f-name">Requires a license to use your content</span><span class="f-bar"><span style="width:83.3%"></span></span><span class="f-n">20<small> of 24</small></span></li></ul></div></div>
+            <p class="fine">Privacy practices describe what platforms do with your information. They are not always protections: cooperating with law enforcement can help one user and put another at risk.</p>
+            <p class="fine">Source: Jones, Vanderpool, Datuowei, Mewani, and Toussaint Jacques, &ldquo;Safer Than Before? A Content Analysis of Safety Features and Policy Frameworks Across 24 North American Dating Platforms, 2025 to 2026&rdquo; (submitted). Scores reflect publicly available documentation on April 2, 2026, and apps change their features often. Feature counts come from the study&rsquo;s April 2026 coded data. &ldquo;Charges for&rdquo; lists safety-related features found behind a paywall.</p>
         </div>
     </section>
 
