@@ -637,8 +637,65 @@
         .course-grid {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% - 2rem) / 3);
             gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            padding-bottom: 0.25rem;
+        }
+
+        .course-grid::-webkit-scrollbar { display: none; }
+
+        .course-grid li { scroll-snap-align: start; }
+
+        .courses-headrow {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 3rem 0 1.25rem;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .courses-headrow .courses-head {
+            margin: 0;
+            border-bottom: 0;
+        }
+
+        .carousel-nav {
+            display: flex;
+            gap: 0.5rem;
+            padding-bottom: 0.6rem;
+        }
+
+        .carousel-btn {
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            border: 1px solid var(--primary-navy);
+            background: var(--bg-white);
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0.15rem;
+            transition: background 0.2s, color 0.2s, opacity 0.2s;
+        }
+
+        .carousel-btn:hover:not(:disabled) {
+            background: var(--primary-navy);
+            color: var(--gold-accent);
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.3;
+            cursor: default;
         }
 
         .course-grid li {
@@ -1174,7 +1231,7 @@
             }
 
             .course-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-auto-columns: calc((100% - 1rem) / 2);
             }
         }
 
@@ -1286,6 +1343,7 @@
             .course-grid { grid-template-columns: none; grid-template-rows: repeat(2, auto); grid-auto-columns: 44%; gap: 0.75rem; }
             .course-grid li { scroll-snap-align: start; padding: 0.85rem 1rem; }
             .course-grid .course-desc, .course-grid .course-link { display: none; }
+            .carousel-nav { display: none; }
             .course-num { font-size: 1.05rem; }
             .course-title { font-size: 0.88rem; line-height: 1.35; }
         }
@@ -1455,7 +1513,13 @@
                     <img src="faculty-forum-photo.jpg" alt="Dr. Vincent Jones II presenting at the York College Faculty Forum" loading="lazy">
                 </div>
             </div>
-            <h3 class="courses-head">Courses taught</h3>
+            <div class="courses-headrow">
+                <h3 class="courses-head">Courses taught</h3>
+                <div class="carousel-nav" aria-label="Scroll courses">
+                    <button type="button" class="carousel-btn" data-dir="-1" aria-label="Previous courses">&#8249;</button>
+                    <button type="button" class="carousel-btn" data-dir="1" aria-label="Next courses">&#8250;</button>
+                </div>
+            </div>
             <p class="courses-note">Course titles and descriptions are in the <a href="https://york-undergraduate.catalog.cuny.edu/departments/HLTHED-YRK/courses" target="_blank" rel="noopener">York College catalog</a>.</p>
             <p class="swipe-hint" aria-hidden="true">Swipe to see all eleven courses &rarr;</p>
             <ul class="course-grid">
@@ -1585,6 +1649,26 @@
         <p><a href="mailto:vjones1@york.cuny.edu">vjones1@york.cuny.edu</a> &middot; <a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener">Curriculum vitae</a> &middot; <a href="https://www.linkedin.com/in/vincentjonesii/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://orcid.org/0000-0002-1220-6976" target="_blank" rel="noopener">ORCID</a></p>
     </footer>
 
+    <script>
+    (function () {
+        var track = document.querySelector('.course-grid');
+        var btns = document.querySelectorAll('.carousel-btn');
+        if (!track || !btns.length) return;
+        function update() {
+            var max = track.scrollWidth - track.clientWidth - 2;
+            btns[0].disabled = track.scrollLeft <= 2;
+            btns[1].disabled = track.scrollLeft >= max;
+        }
+        btns.forEach(function (b) {
+            b.addEventListener('click', function () {
+                track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth, behavior: 'smooth' });
+            });
+        });
+        track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+    })();
+    </script>
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
