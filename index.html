@@ -888,6 +888,11 @@
             line-height: 1.4;
         }
 
+        .talk-photo-group img {
+            aspect-ratio: 4 / 5;
+            object-position: center;
+        }
+
         @media (max-width: 768px) {
             .talk-with-photo {
                 grid-template-columns: 1fr;
@@ -1435,11 +1440,17 @@
             </div>
             <div class="recent-talks">
                 <h3>Selected Talks</h3>
-                <div class="talk talk-featured">
+                <div class="talk talk-featured talk-with-photo">
+                    <div class="talk-body">
                     <span class="talk-tag">Invited panelist · United Nations</span>
                     <h4>Impact of Online Dating on Family Formation: From Community-Mediated Introductions to Algorithm-Driven Encounters</h4>
                     <p class="talk-meta">Side event, 59th Session of the UN Commission on Population and Development | United Nations, New York | May 2026</p>
                     <p>Before an audience of diplomats, scholars, faith leaders, and youth advocates, Dr. Jones argued that dating app safety belongs to public policy, education, and platform culture rather than to personal responsibility alone. Drawing on his team's harm scale, their review of North American platforms, and the gap between how often harms occur and how much they hurt, he set out five priorities: transparency about what happens after a user reports harm, safety features that are not sold by subscription tier, dating app safety in health education curricula, policy designed with the people most affected, and accountability for the user cultures platforms cultivate. The panel was moderated by the Sikh Human Rights Group.</p>
+                    </div>
+                    <figure class="talk-photo talk-photo-group">
+                        <img src="un-cpd-2026-photo.jpg" alt="Dr. Vincent Jones II in a gray suit standing with two other attendees at the United Nations side event" loading="lazy" width="900" height="1125">
+                        <figcaption>Commission on Population and Development side event, United Nations, May 2026</figcaption>
+                    </figure>
                 </div>
 
                 <div class="talk talk-with-photo">
