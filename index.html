@@ -864,6 +864,39 @@
             line-height: 1.8;
         }
 
+        .talk-with-photo {
+            display: grid;
+            grid-template-columns: 1fr 240px;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .talk-photo img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: 60% 15%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .talk-photo figcaption {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.65);
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .talk-with-photo {
+                grid-template-columns: 1fr;
+            }
+            .talk-photo {
+                max-width: 320px;
+            }
+        }
+
         .booking-cta {
             margin-top: 4rem;
             text-align: center;
@@ -1409,10 +1442,16 @@
                     <p>Before an audience of diplomats, scholars, faith leaders, and youth advocates, Dr. Jones argued that dating app safety belongs to public policy, education, and platform culture rather than to personal responsibility alone. Drawing on his team's harm scale, their review of North American platforms, and the gap between how often harms occur and how much they hurt, he set out five priorities: transparency about what happens after a user reports harm, safety features that are not sold by subscription tier, dating app safety in health education curricula, policy designed with the people most affected, and accountability for the user cultures platforms cultivate. The panel was moderated by the Sikh Human Rights Group.</p>
                 </div>
 
-                <div class="talk">
+                <div class="talk talk-with-photo">
+                    <div class="talk-body">
                     <h4>What Dating Apps Don't Measure: A Public Health Approach to Harm, Protection, and Equity</h4>
                     <p class="talk-meta">York College Faculty Symposium, The City University of New York | November 5, 2026</p>
                     <p>A 30-minute talk built around five questions: what actually happens on dating apps, why we didn't know, whether people can just block and report, who gets hurt the most, and what actually protects people. The session opens with a live audience poll and closes with a hands-on activity in which attendees take the place of a dating app user, read two conversations, name the harm, and choose a response.</p>
+                    </div>
+                    <figure class="talk-photo">
+                        <img src="symposium-2026-photo.jpg" alt="Dr. Vincent Jones II in a burgundy blazer and bow tie beside the screen announcing his York College Faculty Symposium talk in room 2D01" loading="lazy" width="900" height="1200">
+                        <figcaption>York College Faculty Symposium, November 5, 2026</figcaption>
+                    </figure>
                 </div>
             </div>
 
