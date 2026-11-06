@@ -1090,7 +1090,15 @@
             }
 
             .hero-image {
-                height: 500px;
+                height: auto;
+                width: 100%;
+                max-width: 440px;
+                order: -1;
+            }
+
+            .hero-image img {
+                height: auto;
+                aspect-ratio: 9 / 10;
             }
 
             .hero-content h1 {
@@ -1196,8 +1204,12 @@
                 font-size: 1.2rem;
             }
 
+            .hero .container {
+                gap: 1.75rem;
+            }
+
             .hero-image {
-                height: 400px;
+                max-width: none;
             }
 
             h2 {
