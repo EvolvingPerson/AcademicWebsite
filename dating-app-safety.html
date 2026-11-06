@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Steps for Vetting a Dating App Profile | Dr. Vincent Jones II</title>
-    <meta name="description" content="Eight steps for checking whether a dating app profile is real and safe, plus how 24 dating apps compare on documented safety features, from Dr. Vincent Jones II at York College, The City University of New York.">
+    <title>10 Steps for Vetting a Dating App Match | Dr. Vincent Jones II</title>
+    <meta name="description" content="Ten steps for checking whether a dating app match is real and safe, and for protecting yourself either way, plus how 24 dating apps compare on documented safety features, from Dr. Vincent Jones II at York College, The City University of New York.">
     <meta name="author" content="Vincent Jones II">
     <link rel="canonical" href="https://www.drvincentjones.com/dating-app-safety.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dr. Vincent Jones II">
-    <meta property="og:title" content="8 Steps for Vetting a Dating App Profile | Dr. Vincent Jones II">
-    <meta property="og:description" content="Eight questions to ask before you trust a dating app match: photos, bio, pace, money, consistency, and more.">
+    <meta property="og:title" content="10 Steps for Vetting a Dating App Match | Dr. Vincent Jones II">
+    <meta property="og:description" content="Ten checks to run before you trust a dating app match: photos, specifics, live video, pace, money, intimate images, your own profile, and the first meeting.">
     <meta property="og:url" content="https://www.drvincentjones.com/dating-app-safety.html">
     <meta property="og:image" content="https://www.drvincentjones.com/og-image-v3.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="8 Steps for Vetting a Dating App Profile | Dr. Vincent Jones II">
-    <meta name="twitter:description" content="Eight questions to ask before you trust a dating app match: photos, bio, pace, money, consistency, and more.">
+    <meta name="twitter:title" content="10 Steps for Vetting a Dating App Match | Dr. Vincent Jones II">
+    <meta name="twitter:description" content="Ten checks to run before you trust a dating app match: photos, specifics, live video, pace, money, intimate images, your own profile, and the first meeting.">
     <meta name="twitter:image" content="https://www.drvincentjones.com/og-image-v3.jpg">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
@@ -364,13 +364,36 @@
         .step li::before { content: ""; position: absolute; left: 0.2rem; top: 0.68rem; width: 7px; height: 7px; border-radius: 50%; background: var(--rich-teal); }
         .step .flag { margin-top: 1rem; font-size: 0.92rem; color: var(--text-light); }
         .intro-text { max-width: 860px; margin-bottom: 2.5rem; }
+        .signals { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+        .signal { border-radius: 12px; padding: 1.5rem 1.75rem; border: 1px solid var(--border-light); }
+        .signal h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--primary-navy); }
+        .signal-rule { font-size: 0.95rem; font-weight: 600; margin: 0.2rem 0 0.9rem; }
+        .signal ul { list-style: none; display: grid; gap: 0.55rem; }
+        .signal li { position: relative; padding-left: 1.5rem; color: var(--text-body); line-height: 1.55; }
+        .signal-stop { background: #FDECEC; border-color: #F3C7C7; border-top: 4px solid #B42318; }
+        .signal-stop .signal-rule { color: #B42318; }
+        .signal-stop li::before { content: "\2715"; position: absolute; left: 0; top: 0; color: #B42318; font-weight: 700; }
+        .signal-slow { background: var(--warn-bg); border-color: #F1DDB0; border-top: 4px solid var(--gold-accent); }
+        .signal-slow .signal-rule { color: var(--gold-text); }
+        .signal-slow li::before { content: "!"; position: absolute; left: 0.3rem; top: 0; color: var(--gold-text); font-weight: 800; }
+        .checklist-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+        .checklist-progress { font-weight: 600; color: var(--primary-navy); }
+        .checklist-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .checklist-actions button { font: inherit; font-size: 0.92rem; font-weight: 600; padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid var(--rich-teal); background: var(--rich-teal); color: #fff; cursor: pointer; }
+        .checklist-actions button.ghost { background: transparent; color: var(--rich-teal); }
+        .step .do { display: flex; gap: 0.75rem; align-items: flex-start; margin-top: 1.1rem; padding: 0.9rem 1rem; background: var(--light-teal); border-radius: 8px; cursor: pointer; line-height: 1.6; color: var(--text-body); }
+        .step .do input { flex: none; width: 1.2rem; height: 1.2rem; margin-top: 0.2rem; accent-color: var(--success-line); cursor: pointer; }
+        .step .do a { color: var(--rich-teal); font-weight: 600; }
+        .step.is-done { border-top-color: var(--success-line); }
+        .step.is-done .do { background: var(--success-bg); }
+        .step li a { color: var(--rich-teal); font-weight: 600; }
         .intro-text p + p { margin-top: 1rem; }
-        .help-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; text-align: left; }
+        .help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; text-align: left; }
         .help { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 10px; padding: 1.25rem; }
         .help h4 { margin-bottom: 0.25rem; }
         .help p { font-size: 0.95rem; line-height: 1.55; }
         @media (max-width: 1024px) { .help-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 768px) { .steps, .help-grid { grid-template-columns: 1fr; } .step { padding: 1.4rem; } }
+        @media (max-width: 768px) { .steps, .help-grid, .signals { grid-template-columns: 1fr; } .step { padding: 1.4rem; } .signal { padding: 1.25rem 1.4rem; } }
 
         /* Platform comparison */
         .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.75rem; }
@@ -435,17 +458,19 @@
     <section class="cover">
         <div class="container">
             <span class="kicker">Dating App Safety</span>
-            <h1>8 Steps for Vetting a Dating App Profile</h1>
-            <p class="lede">Eight questions to ask before you trust a match. I teach these in Health and the Individual (HE 111) at York College, and they work best when you use them before you meet, not after.</p>
+            <h1>10 Steps for Vetting a Dating App Match</h1>
+            <p class="lede">Ten checks to run before you trust a match, and before you let a match find you. I teach these in Health and the Individual (HE 111) at York College. They work best before you meet, not after.</p>
             <ul class="summary-strip">
+                <li>Your gut</li>
                 <li>Photos</li>
-                <li>Bio</li>
-                <li>Engagement</li>
-                <li>Online presence</li>
-                <li>Money and personal information</li>
+                <li>Specifics</li>
+                <li>Online footprint</li>
+                <li>Live video</li>
                 <li>Pace</li>
-                <li>Consistency</li>
-                <li>Verification and intuition</li>
+                <li>Money</li>
+                <li>Intimate images</li>
+                <li>Your own profile</li>
+                <li>First meeting</li>
             </ul>
             <p style="margin-top:2rem"><a href="#platforms" style="color:var(--gold-accent);font-weight:600;text-decoration:none">See how 24 dating apps compare on safety &darr;</a></p>
         </div>
@@ -454,68 +479,131 @@
     <!-- Steps -->
     <section id="steps">
         <div class="container">
-            <span class="label">The eight steps</span>
-            <h2>Check the profile, then check the pattern</h2>
+            <span class="label">The ten steps</span>
+            <h2>Check the person, then protect yourself</h2>
             <div class="intro-text">
-                <p>The first four steps are about the profile itself. The last four are about how the person behaves once you start talking. No single answer proves a profile is fake, but several warning signs together are worth taking seriously.</p>
+                <p>Steps 1 through 8 check the person you are talking to. Steps 9 and 10 protect you whoever they turn out to be. In my research, the most distressing harms on dating apps came from real people, not fake profiles, so the last two steps matter even when everything else checks out.</p>
+            </div>
+            <div class="signals">
+                <div class="signal signal-stop">
+                    <h3>Stop now</h3>
+                    <p class="signal-rule">Any one of these is enough.</p>
+                    <ul>
+                        <li>They ask for money, gift cards, or cryptocurrency</li>
+                        <li>They ask for intimate images before you have met</li>
+                        <li>They keep refusing a live video call</li>
+                        <li>They threaten you, or keep pushing after you say no</li>
+                    </ul>
+                </div>
+                <div class="signal signal-slow">
+                    <h3>Slow down</h3>
+                    <p class="signal-rule">Two or three together means stop.</p>
+                    <ul>
+                        <li>They want to leave the app right away</li>
+                        <li>They talk about love or fate within days</li>
+                        <li>Every photo is a polished solo portrait</li>
+                        <li>Their answers stay vague when you ask for specifics</li>
+                        <li>You can find no trace of them anywhere else</li>
+                        <li>They are online at hours that do not fit where they live</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="checklist-bar">
+                <p class="checklist-progress" aria-live="polite"><span id="done-count">0</span> of 10 steps done</p>
+                <div class="checklist-actions">
+                    <button type="button" id="share-steps">Share with a friend</button>
+                    <button type="button" id="reset-steps" class="ghost">Clear checks</button>
+                </div>
             </div>
             <div class="steps">
-                <article class="step">
-                    <div class="step-head"><span class="step-num">1</span><h3>Profile photos</h3></div>
+                <article class="step" id="step-1">
+                    <div class="step-head"><span class="step-num">1</span><h3>Start with your gut</h3></div>
                     <ul>
-                        <li>Are the photos too good to be true, like professional model shots?</li>
-                        <li>Does a reverse image search turn the photo up on stock photo sites, or show it is widely used elsewhere?</li>
+                        <li>If something feels off, that feeling is information. You do not need proof to unmatch.</li>
+                        <li>Notice when you are explaining away something you would question if a friend described it.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="1"><span><b>Do this:</b> Decide now that &ldquo;this feels off&rdquo; is reason enough to stop talking, unmatch, or leave.</span></label>
                 </article>
-                <article class="step">
-                    <div class="step-head"><span class="step-num">2</span><h3>Profile details and bio</h3></div>
+                <article class="step" id="step-2">
+                    <div class="step-head"><span class="step-num">2</span><h3>Look closely at the photos</h3></div>
                     <ul>
-                        <li>Is the bio detailed, realistic, and consistent, or vague and generic?</li>
-                        <li>Are there spelling and grammar errors that seem out of place for the background the person claims?</li>
+                        <li>Many fake profiles now use faces made with artificial intelligence (AI). Those faces never existed before, so a reverse image search will not find them.</li>
+                        <li>Real people have candid photos: friends in the frame, ordinary backgrounds, mixed lighting, different haircuts and ages. Be wary when every photo is a polished solo portrait.</li>
+                        <li>AI faces often slip at the edges: mismatched earrings, warped glasses frames, strange hands or teeth, garbled text in the background.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="2"><span><b>Do this:</b> Screenshot a photo and search it with Google Lens anyway. It still catches stolen photos, which are common. If the photo turns up under another name, stop.</span></label>
                 </article>
-                <article class="step">
-                    <div class="step-head"><span class="step-num">3</span><h3>Activity and engagement</h3></div>
+                <article class="step" id="step-3">
+                    <div class="step-head"><span class="step-num">3</span><h3>Ask for specifics</h3></div>
                     <ul>
-                        <li>Do their replies sound human and fit the conversation, or do they feel automated or off topic?</li>
-                        <li>Are they overly eager or pushy about moving the conversation to another app or platform very quickly?</li>
+                        <li>Scammers write with AI now, so polished grammar proves nothing. Imperfect English proves nothing either; many real people write in a second language.</li>
+                        <li>What scripts and chatbots handle badly is follow-up. Ask about something specific they told you earlier: the name of the place they work, or what happened at the event they mentioned.</li>
+                        <li>Watch for answers that are warm but vague, or that change the subject.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="3"><span><b>Do this:</b> Ask two concrete follow-up questions. Real people answer with details; scripts answer with feelings.</span></label>
                 </article>
-                <article class="step">
-                    <div class="step-head"><span class="step-num">4</span><h3>Social media and online presence</h3></div>
+                <article class="step" id="step-4">
+                    <div class="step-head"><span class="step-num">4</span><h3>Check their footprint outside the app</h3></div>
                     <ul>
-                        <li>Can you find a linked social media account, and does it look real, with a history of posts and interactions?</li>
-                        <li>Is their story consistent across platforms, or do the details not match?</li>
+                        <li>Look them up by name, workplace, or linked account. A real person usually leaves some trace: a LinkedIn page, a tagged photo, a friend in common.</li>
+                        <li>Check that the details match across places: age, job, city, and story.</li>
+                        <li>A verified badge usually means their face matched a selfie, not that the app checked who they are. Only 9 of the 24 apps my team studied document photo or ID verification at all.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="4"><span><b>Do this:</b> Search their name with their city or workplace before you meet. No trace at all is a reason to slow down, not proof, since some people keep a low profile on purpose.</span></label>
                 </article>
-                <article class="step">
-                    <div class="step-head"><span class="step-num">5</span><h3>Asking for money or personal information</h3></div>
+                <article class="step" id="step-5">
+                    <div class="step-head"><span class="step-num">5</span><h3>Get on a live video call</h3></div>
                     <ul>
-                        <li>Do they quickly bring up financial hardship or ask for money? That is a red flag for a scam profile.</li>
-                        <li>Are they trying to collect personal information from you early, before any real trust or connection exists?</li>
+                        <li>A short, unscripted video call is still one of the best checks. Repeated excuses, like a broken camera or a bad signal, are a reason to stop.</li>
+                        <li>Live face swapping tools now exist, so make the call interactive. Ask them to turn their head side to side or pass a hand in front of their face. Swapped faces often blur or glitch when something crosses them.</li>
+                        <li>If your app has its own video chat, use it, so you do not have to share your phone number yet.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="5"><span><b>Do this:</b> Ask for a five minute video call before you agree to meet.</span></label>
                 </article>
-                <article class="step">
-                    <div class="step-head"><span class="step-num">6</span><h3>Too fast, too soon</h3></div>
+                <article class="step" id="step-6">
+                    <div class="step-head"><span class="step-num">6</span><h3>Watch the pace</h3></div>
                     <ul>
-                        <li>Are they professing love or a deep connection unrealistically quickly, before you have met in person?</li>
-                        <li>Do they dodge questions about meeting, or always have an excuse not to video chat or meet?</li>
+                        <li>Big declarations of love or fate within days, before you have met, are a classic pressure tactic.</li>
+                        <li>Be careful when someone pushes to move to WhatsApp, Telegram, or text right away. Once you leave the app, the app cannot see the conversation or act on your report.</li>
+                        <li>Notice if they disappear and reappear, or are online at hours that do not fit where they say they live.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="6"><span><b>Do this:</b> Keep the conversation on the app until you have met in person. If they will not, that tells you something.</span></label>
                 </article>
-                <article class="step">
-                    <div class="step-head"><span class="step-num">7</span><h3>Consistency in communication</h3></div>
+                <article class="step" id="step-7">
+                    <div class="step-head"><span class="step-num">7</span><h3>Never send money</h3></div>
                     <ul>
-                        <li>Is the way they communicate consistent, or does it not match their supposed lifestyle or time zone?</li>
-                        <li>Do they disappear and reappear without explanation?</li>
+                        <li>Any request for money, gift cards, cryptocurrency, or help with an &ldquo;investment&rdquo; is a reason to stop, however good the story.</li>
+                        <li>Guard information that can be turned into money, too: your full name with your birthday, your workplace, your home address, and any account details.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="7"><span><b>Do this:</b> If money comes up, stop. Report the profile to the app, and report the scam to the Federal Trade Commission at <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">ReportFraud.ftc.gov</a>.</span></label>
                 </article>
-                <article class="step">
-                    <div class="step-head"><span class="step-num">8</span><h3>Other things to consider</h3></div>
+                <article class="step" id="step-8">
+                    <div class="step-head"><span class="step-num">8</span><h3>Hold on to intimate images</h3></div>
                     <ul>
-                        <li>Use the app's verification features, and favor profiles that are verified.</li>
-                        <li>Trust your intuition. If something feels off, take that seriously.</li>
-                        <li>Cross check what they tell you against what you can confirm on your own.</li>
+                        <li>Sextortion moves fast: a flirty match, a quick move to another app, a request to trade photos, then a threat to share yours unless you pay. It can all happen within hours.</li>
+                        <li>Do not send intimate images to someone you have not met in person.</li>
+                        <li>If it is already happening: do not pay, do not delete the conversation, take screenshots, block the person, and report them to the app and to the Federal Bureau of Investigation (FBI) at <a href="https://tips.fbi.gov" target="_blank" rel="noopener">tips.fbi.gov</a>.</li>
                     </ul>
+                    <label class="do"><input type="checkbox" data-step="8"><span><b>Do this:</b> If you are 18 or older and the images were taken when you were 18 or older, use <a href="https://stopncii.org" target="_blank" rel="noopener">StopNCII.org</a> to stop them from spreading on participating platforms. It works from a digital fingerprint, so your images are never uploaded. For images taken before age 18, use <a href="https://takeitdown.ncmec.org" target="_blank" rel="noopener">Take It Down</a> from the National Center for Missing &amp; Exploited Children. Under federal law, platforms must now remove intimate images shared without consent within 48 hours of your request.</span></label>
+                </article>
+                <article class="step" id="step-9">
+                    <div class="step-head"><span class="step-num">9</span><h3>Check what your own profile gives away</h3></div>
+                    <ul>
+                        <li>Run a reverse image search on your own photos. If one leads to your Instagram or LinkedIn, a match can find your full name, workplace, and neighborhood in minutes.</li>
+                        <li>Crop or skip photos that show your building, street signs, a school or work logo, a uniform, or your license plate.</li>
+                        <li>If your app shows how far away you are, turn off exact distance when you can. Exact distance, checked from a few spots, can pin down where you live.</li>
+                    </ul>
+                    <label class="do"><input type="checkbox" data-step="9"><span><b>Do this:</b> Use different photos on the app than on your public social media, and keep your last name, workplace, and neighborhood off your profile.</span></label>
+                </article>
+                <article class="step" id="step-10">
+                    <div class="step-head"><span class="step-num">10</span><h3>Plan the first meeting</h3></div>
+                    <ul>
+                        <li>Only 8 of the 24 apps my team studied give any guidance for meeting in person, so make your own plan.</li>
+                        <li>Meet somewhere public and busy, and get there and home on your own.</li>
+                        <li>Send a friend their name, a screenshot of their profile, where you are going, and a time you will check in. Agree on what your friend should do if you do not.</li>
+                        <li>Choose a place where you are comfortable being seen. For LGBTQ+ people, a first date can carry the risk of being outed.</li>
+                    </ul>
+                    <label class="do"><input type="checkbox" data-step="10"><span><b>Do this:</b> Text a friend your plan before you leave, and check in when you get home.</span></label>
                 </article>
             </div>
         </div>
@@ -529,7 +617,7 @@
             <h2>Which apps document the most safety?</h2>
             <div class="intro-text">
                 <p>My team read the public safety pages, terms of service, and help pages of 24 North American dating platforms on April 2, 2025, and again on April 2, 2026. We checked whether each platform documents specific safety tools, rules against harassment and discrimination, privacy practices, and what it charges for, then gave each platform a score out of 12.</p>
-                <p>A higher score means the app <b>says</b> it does more. It does not prove the app is safer to use, and no score replaces the eight steps above.</p>
+                <p>A higher score means the app <b>says</b> it does more. It does not prove the app is safer to use, and no score replaces the ten steps above.</p>
             </div>
 
             <div class="facts">
@@ -608,6 +696,8 @@
                 <div class="help"><h4>Safe Horizon, NYC, 24/7</h4><p>Any crime<br><a href="tel:+18006214673">1-800-621-4673</a></p></div>
                 <div class="help"><h4>NYC Anti-Violence Project, 24/7</h4><p>LGBTQ and HIV-affected survivors<br><a href="tel:+12127141141">212-714-1141</a></p></div>
                 <div class="help"><h4>Scams and fraud</h4><p>Federal Trade Commission<br><a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">ReportFraud.ftc.gov</a></p></div>
+                <div class="help"><h4>Threats to share intimate images</h4><p>Federal Bureau of Investigation<br><a href="https://tips.fbi.gov" target="_blank" rel="noopener">tips.fbi.gov</a> &middot; <a href="https://stopncii.org" target="_blank" rel="noopener">StopNCII.org</a></p></div>
+                <div class="help"><h4>Images taken before age 18</h4><p>National Center for Missing &amp; Exploited Children<br><a href="https://takeitdown.ncmec.org" target="_blank" rel="noopener">Take It Down</a></p></div>
             </div>
             <p class="caption" style="margin-top:1.5rem">If you are in immediate danger, call 911.</p>
         </div>
@@ -617,5 +707,37 @@
         <p>&copy; 2026 Dr. Vincent Jones II</p>
         <p><a href="index.html">Home</a> &middot; <a href="mailto:vjones1@york.cuny.edu">vjones1@york.cuny.edu</a> &middot; <a href="Vincent_Jones_CV.pdf" target="_blank" rel="noopener">Curriculum vitae</a> &middot; <a href="https://www.linkedin.com/in/vincentjonesii/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://orcid.org/0000-0002-1220-6976" target="_blank" rel="noopener">ORCID</a></p>
     </footer>
+    <script>
+    (function () {
+        var KEY = 'vettingChecklist.v1';
+        var boxes = Array.prototype.slice.call(document.querySelectorAll('.step .do input'));
+        var count = document.getElementById('done-count');
+        function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+        function save(state) { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+        function render() {
+            var n = 0;
+            boxes.forEach(function (b) { var done = b.checked; b.closest('.step').classList.toggle('is-done', done); if (done) n++; });
+            count.textContent = n;
+        }
+        var state = load();
+        boxes.forEach(function (b) {
+            b.checked = !!state[b.dataset.step];
+            b.addEventListener('change', function () { state[b.dataset.step] = b.checked; save(state); render(); });
+        });
+        render();
+        document.getElementById('reset-steps').addEventListener('click', function () {
+            state = {}; save(state); boxes.forEach(function (b) { b.checked = false; }); render();
+        });
+        var share = document.getElementById('share-steps');
+        share.addEventListener('click', function () {
+            var url = location.origin + location.pathname + '#steps';
+            var data = { title: '10 Steps for Vetting a Dating App Match', text: 'Before your date, run through these ten checks:', url: url };
+            if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+            var done = function () { share.textContent = 'Link copied'; setTimeout(function () { share.textContent = 'Share with a friend'; }, 2000); };
+            if (navigator.clipboard) { navigator.clipboard.writeText(url).then(done, function () { prompt('Copy this link:', url); }); }
+            else { prompt('Copy this link:', url); }
+        });
+    })();
+    </script>
 </body>
 </html>
