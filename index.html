@@ -1221,9 +1221,6 @@
                 font-size: 1.6rem;
             }
 
-            .course-grid {
-                grid-template-columns: 1fr;
-            }
         }
         /* Dating App Research Portfolio preview */
         .portfolio-preview { margin: 0 0 3rem; }
@@ -1245,9 +1242,30 @@
             .pcard, .pcard:nth-child(4) { grid-column: auto; }
             .pcard:nth-child(5) { grid-column: 1 / -1; }
         }
+        .swipe-hint { display: none; }
         @media (max-width: 768px) {
-            .portfolio-cards { grid-template-columns: 1fr; }
-            .pcard:nth-child(5) { grid-column: auto; }
+            /* Phones: research cards and courses become side-swipe rows */
+            .swipe-hint { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text-light); margin: -0.75rem 0 0.75rem; }
+            .portfolio-cards, .course-grid {
+                display: grid;
+                grid-auto-flow: column;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-padding-left: var(--swipe-gutter, 1.5rem);
+                margin-left: calc(-1 * var(--swipe-gutter, 1.5rem));
+                margin-right: calc(-1 * var(--swipe-gutter, 1.5rem));
+                padding: 0.25rem var(--swipe-gutter, 1.5rem) 1rem;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .portfolio-cards::-webkit-scrollbar, .course-grid::-webkit-scrollbar { display: none; }
+            .portfolio-cards { grid-template-columns: none; grid-auto-columns: 82%; gap: 1rem; }
+            .pcard, .pcard:nth-child(4), .pcard:nth-child(5) { grid-column: auto; scroll-snap-align: start; }
+            .course-grid { grid-template-columns: none; grid-template-rows: repeat(2, auto); grid-auto-columns: 44%; gap: 0.75rem; }
+            .course-grid li { scroll-snap-align: start; padding: 0.85rem 1rem; }
+            .course-grid .course-desc, .course-grid .course-link { display: none; }
+            .course-num { font-size: 1.05rem; }
+            .course-title { font-size: 0.88rem; line-height: 1.35; }
         }
 
         nav ul a, nav ul li { white-space: nowrap; }
@@ -1388,6 +1406,7 @@
             <div class="portfolio-preview">
                 <div class="portfolio-head"><h3>Dating App Research Portfolio</h3><a href="research-portfolio.html">View the full portfolio &rarr;</a></div>
                 <p class="portfolio-intro">Five manuscripts examining digital harm, queer space, platform safety, and measurement science in dating applications.</p>
+                <p class="swipe-hint" aria-hidden="true">Swipe to see all five &rarr;</p>
                 <div class="portfolio-cards">
                     <a class="pcard" href="research-portfolio.html#paper-01"><span class="pcard-num">01</span><h4>Digital Hetrification and Double Displacement</h4><p class="pcard-authors">Vincent A. Jones II, Ed.D.; Laurie Essig, Ph.D.</p><p>When straight users flood queer dating spaces like Grindr, they bring mainstream norms with them and erode what made those spaces safe in the first place. We call this digital hetrification.</p><span class="pcard-more">Read more &rarr;</span></a>
                     <a class="pcard" href="research-portfolio.html#paper-02"><span class="pcard-num">02</span><h4>Safer Than Before?</h4><p class="pcard-authors">Vincent Jones II; Celeta Vanderpool; Erela Datuowei; Apeksha Mewani, Ed.D.; Erin Toussaint Jacques, Ph.D., Ed.D.</p><p>We tracked safety features across 24 dating platforms over a year. Not one protects users after they report abuse, and most charge extra for basic safety tools.</p><span class="pcard-more">Read more &rarr;</span></a>
@@ -1416,6 +1435,7 @@
             </div>
             <h3 class="courses-head">Courses taught</h3>
             <p class="courses-note">Course titles and descriptions are in the <a href="https://york-undergraduate.catalog.cuny.edu/departments/HLTHED-YRK/courses" target="_blank" rel="noopener">York College catalog</a>.</p>
+            <p class="swipe-hint" aria-hidden="true">Swipe to see all eleven courses &rarr;</p>
             <ul class="course-grid">
                     <li><span class="course-num">HE 111</span><span class="course-title">Health and the Individual</span><span class="course-desc">Assessing personal health behavior and building strategies to lower health risk.</span><span class="course-link"><a href="https://york-undergraduate.catalog.cuny.edu/courses/1070601" target="_blank" rel="noopener">Catalog description &rarr;</a></span></li>
                     <li><span class="course-num">HE 201</span><span class="course-title">Foundations of Health and Wellness</span><span class="course-desc">The history, philosophy, and theory behind health education and health promotion.</span><span class="course-link"><a href="https://york-undergraduate.catalog.cuny.edu/courses/1070621" target="_blank" rel="noopener">Catalog description &rarr;</a></span></li>
